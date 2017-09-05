@@ -3,22 +3,40 @@
 
 #skiplinks_nav {
 	position: absolute; 
-	padding-top: 0;
+	padding: 0;
+	z-index: 900;
 }
 .skiplinks-menu {
 	
 	a {
 		position: fixed; 
-		top: -65px;
-		padding: $grid-padding;
-		background-color: #000;
-		font-family: $font-bold;
+		top: 75px;
+		left: -25rem;
+		padding: $grid-padding $grid-padding*2;
+		padding-right: $grid-padding*6;
+		border-top-right-radius: 60px;
+		border-bottom-right-radius: 60px;
+		background-color: $secondary-color;
+		font-family: $font-title;
 		color: #fff;
 		text-decoration: none;
-		transition: top .2s ease-in;
+		transition: left .4s ease-in-out;
 	
-		&:focus {
-			top: -5px;
+		&:hover, &:focus {
+			left: 0;
+			outline: none;
+			
+			&::after {
+				content: '';
+				display: block;
+				width: 104px; 
+				height: 104px;
+				background: url(img/icon/star.svg) 0 0 no-repeat;
+				position: absolute;
+				top: -65%;
+				right: -15%;
+				animation: rotate-forever 10s linear infinite;
+			}
 		}
 
 	}
@@ -29,6 +47,32 @@
 
 .contrast-switch {
 	position: fixed;
+	right: $grid-padding*2;
+	top: 0;
+	padding-top: $grid-padding*2;
+	padding-bottom: $grid-padding;
+	z-index: 900;
+	
+	&::before {
+		content: '';
+		display: inline-block;
+		width: 16px; height: 16px;
+		background: url(img/icon/contrast.svg) 0 0 no-repeat;
+		vertical-align: middle;
+		margin-right: $grid-padding/2;
+	}
+	
+	& a {
+		font-family: $font-title;
+		color: #fff;
+		text-decoration: none;
+		font-size: 1.4rem;
+	}
+	
+	& a:focus, & a:hover {
+		border-bottom: #fff 2px solid;
+		outline: none;
+	}
 }
 
 // Main nav
@@ -38,9 +82,8 @@
 	position: fixed;
 	top: 0; left: 0;
 	width: 100%;
-	height: 60px;
 	background-color: $secondary-color;
-	z-index: 900;
+	z-index: 800;
 }
 
 .main-menu {
@@ -51,25 +94,39 @@
 		position: relative;
 		display: block;
 		color: #fff;
+		font-family: $font-title;
+		text-transform: uppercase;
 		
 		@include rwd(medium) {
-			display: inline-block;
-			margin-right: $grid-padding;
+			margin: 0 $grid-padding;
+			
+			&::after {
+				content: " ~ ";
+				margin-left: $grid-padding;
+			}
+			&:last-child::after {
+				content: none;
+			}
 		}
 		
 		a {
-			
+			display: inline-block;
+			padding: $grid-padding*2 $grid-padding;
+			text-decoration: none;
+			transition: background .2s ease-in-out; 
 		}
-		a:hover, a:focus,
-		&.current-menu-item a {
-			
+		a:hover, a:focus, a:active,
+		&.active a {
+			background-color: $primary-color;
+			outline: none;
 		}
 		
 		
 	}
 	
 	@include rwd(medium) {
-		display: block;
+		display: flex;
+		justify-content: center;
 	}
 	
 }

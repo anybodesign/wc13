@@ -26,23 +26,25 @@
 		
 		<nav id="skiplinks_nav" role="navigation">
 			<ul class="skiplinks-menu">
-				<li class="skiplinks-menu--item"><a href="#main_nav">Aller au menu</a></li>
-				<li class="skiplinks-menu--item"><a href="#fullpage">Aller au contenu</a></li>
+				<li><a href="#main_nav">Aller au menu</a></li>
+				<li><a href="#fullpage">Aller au contenu</a></li>
 			</ul>
 		</nav>
 		
 		<nav id="main_nav" role="navigation">
-			<ul class="main-menu" id="main_menu">
-				<li class="main-menu--item"><a href="#a11y">A11y</a></li>
-				<li class="main-menu--item"><a href="#typography">Typographie</a></li>
-				<li class="main-menu--item"><a href="#navigation">Navigation</a></li>
-				<li class="main-menu--item"><a href="#forms">Formulaires</a></li>
-				<li class="main-menu--item"><a href="#colors">Couleurs</a></li>
-				<li class="main-menu--item"><a href="#images">Images</a></li>			
+			<ul class="main-menu">
+				<li data-menuanchor="a11y"><a href="#a11y">A11y</a></li>
+				<li data-menuanchor="typography"><a href="#typography">Typographie</a></li>
+				<li data-menuanchor="navigation"><a href="#navigation">Navigation</a></li>
+				<li data-menuanchor="forms"><a href="#forms">Formulaires</a></li>
+				<li data-menuanchor="colors"><a href="#colors">Couleurs</a></li>
+				<li data-menuanchor="images"><a href="#images">Images</a></li>			
 			</ul>
 		</nav>
 		
-		<a href="#" class="contrast-switch">Fort contraste</a>
+		<div class="contrast-switch">
+			<a href="#">Fort contraste</a>
+		</div>
 		
 	</header>
 	
@@ -56,16 +58,21 @@
 	
 		<div class="section cover-section">
 			
-			<h1 class="title-main wow animated bounceIn" data-wow-delay="0.25s">
-				un
-				<br>
-				design
-				<br>
-				accessible
-			</h1>
+			<div class="inner">
+				<h1 class="title-main wow animated bounceIn" data-wow-delay="1s">
+					un
+					<br>
+					design
+					<br>
+					accessible
+				</h1>
+				
+				<img class="cover-box wow animated fadeInRight" src="img/sardine-box.png" alt="visuel boite de sardines wordcamp marseille 2017">
+			</div>
 			
-			<img class="cover-box" src="img/sardine-box.png" alt="visuel boite de sardines wordcamp marseille 2017">
-			<img class="cover-star fitting animated fadeIn" data-src="img/icon/star.svg" alt="motif étoile">
+			<img class="cover-star infinite-rotation" data-src="img/icon/star.svg" alt="motif étoile">
+			
+			<a href="#a11y" class="hand-btn wow animated bounceInUp" data-wow-delay="1.5s" data-anchor="a11y">On commence ?</a>
 		</div>
 		
 	<!-- 	// A11y ***** -->
@@ -73,9 +80,32 @@
 	
 		<div class="section">
 			
-			<h2 class="title-std">
-				<span class="wow animated flipInX">Bonjour</span>
-			</h2>
+			<div class="inner">
+				<div class="row">
+					
+					<div class="col-6">
+						<figure>
+							<img src="img/wcmarseille-soap.jpg" alt="savon du wordcamp marseille">
+						</figure>
+					</div>
+					
+					<div class="col-6">
+						<div class="a11y-slider slicky-slider">
+							
+							<div class="slicky-slide">
+								<h2 class="a11y-title">A11y</h2>
+							</div>
+							
+							<div class="slicky-slide">
+								<p class="a11y-numeronym"><span>A</span>ccessibilit<span>y</span></p>
+								<p class="a11y-number">11</p>
+							</div>
+							
+						</div>
+					</div>
+					
+				</div>
+			</div>
 			
 		</div>
 
@@ -83,15 +113,62 @@
 	<!-- 	// Typography ***** -->
 	
 	
-		<div class="section">
+		<div class="section" id="typography_section">
 			
 			<h2 class="title-std">
 				<span class="wow animated flipInX">Typographie</span>
 			</h2>
 			
+			<p>Nulla <a href="#">vitae</a> elit libero, a pharetra augue.</p>
+			
 		</div>
+
+
+	<!-- 	// Navigation ***** -->
 	
 	
+		<div class="section">
+			
+			<h2 class="title-std">
+				<span class="wow animated flipInX">Navigation</span>
+			</h2>
+			
+		</div>
+
+
+	<!-- 	// Forms ***** -->
+	
+	
+		<div class="section">
+			
+			<h2 class="title-std">
+				<span class="wow animated flipInX">Formulaires</span>
+			</h2>
+			
+		</div>			
+
+
+	<!-- 	// Colors ***** -->
+	
+	
+		<div class="section">
+			
+			<h2 class="title-std">
+				<span class="wow animated flipInX">Couleurs</span>
+			</h2>
+			
+		</div>	
+
+	<!-- 	// Images ***** -->
+	
+	
+		<div class="section">
+			
+			<h2 class="title-std">
+				<span class="wow animated flipInX">Images et pictos</span>
+			</h2>
+			
+		</div>		
 	
 		
 	</div> <!-- End fullPage -->
@@ -102,16 +179,18 @@
 <script src="js/jquery.fullPage.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/wow.min.js"></script>
+<script src="js/main.js"></script>
 
 <script>
 	$(document).ready(function() {
 		$('#fullpage').fullpage({
 			scrollBar:		true,
-			//controlArrows: 	false,
+			autoScrolling: false,
 			loopHorizontal: false,
-			scrollingSpeed:	1000,
-			anchors: ['cover', 'a11y', 'typography'],
+			anchors: ['cover', 'a11y', 'typography', 'navigation', 'forms', 'colors', 'images'],
 			menu: '#main_nav ul',
+			css3: true,
+			scrollingSpeed:	1000,
 		});		
 	});
 	new WOW().init();

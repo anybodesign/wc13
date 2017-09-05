@@ -11,12 +11,12 @@ $slick-font-path: "../fonts/" !default;
 $slick-font-family: "slick" !default;
 $slick-loader-path: "../img/" !default;
 $slick-arrow-color: white !default;
-$slick-dot-color: black !default;
-$slick-dot-color-active: $slick-dot-color !default;
+$slick-dot-color: #2A9CCE !default;
+$slick-dot-color-active: #0A4B5B !default;
 $slick-prev-character: "\2190" !default;
 $slick-next-character: "\2192" !default;
 $slick-dot-character: "\2022" !default;
-$slick-dot-size: 6px !default;
+$slick-dot-size: 12px !default;
 $slick-opacity-default: 0.75 !default;
 $slick-opacity-on-hover: 1 !default;
 $slick-opacity-not-active: 0.25 !default;
@@ -162,10 +162,11 @@ $slick-opacity-not-active: 0.25 !default;
             color: transparent;
             padding: 5px;
             cursor: pointer;
+            
             &:hover, &:focus {
                 outline: none;
                 &:before {
-                    opacity: $slick-opacity-on-hover;
+                    transform: scale(1.4);
                 }
             }
             &:before {
@@ -180,14 +181,16 @@ $slick-opacity-not-active: 0.25 !default;
                 line-height: 20px;
                 text-align: center;
                 color: $slick-dot-color;
-                opacity: $slick-opacity-not-active;
+                //opacity: $slick-opacity-not-active;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
+                
+                transition: transform .2s ease-in-out;
             }
         }
         &.slick-active button:before {
             color: $slick-dot-color-active;
-            opacity: $slick-opacity-default;
+            //opacity: $slick-opacity-default;
         }
     }
 }

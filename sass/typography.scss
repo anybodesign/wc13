@@ -323,44 +323,6 @@ iframe {
 }
 
 
-// WP Captions
-
-.wp-caption {
-	margin-bottom: 1.5em;
-	max-width: 100%;
-	
-	.wp-caption-text {
-		text-align: left;
-		font-family: $font-mono;
-		font-size: 1.2rem;
-		
-		&::before {
-			@include pre-stroke();
-		}
-	}
-
-}
-
-// WP Alignments
-
-
-.alignleft,
-.alignright {
-	display: inline; 
-}
-.alignleft {
-	float: left;
-	margin-right: 1.5em;
-}
-.alignright {
-	float: right;
-	margin-left: 1.5em;
-}
-.aligncenter {
-	display: block; 
-	clear: both; 
-	margin: 0 auto;
-}
 
 
 // Buttons
@@ -389,22 +351,23 @@ input[type=submit].action-btn:focus {
 	background-color: lighten($text-color, 10%);
 }
 
-
-
-/* ------------------------------
-//
-//  Print
-// 
-// ------------------------------ */
-
-
-@media print {
+.hand-btn,
+button.action-btn,
+input[type=submit].action-btn {
+	display: block;
+	width: 72px; 
+	height: 72px;
+	border-radius: 36px;
+	border: $secondary-color 5px solid; 
+	background: url(img/icon/hand-white.svg) center center no-repeat;
+	transition: background .4s ease-in-out;
+	@include a11y-hide();
 	
-	// @fix: FF print issue
+	&:focus, &:hover {
+		background-color: $secondary-color;
+		outline: none;
+	}
 	
-	[class*="col-"] { 
-		display: block; 
-		float: left;
-	}   
+}
 
-}	
+
