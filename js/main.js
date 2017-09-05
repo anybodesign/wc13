@@ -35,11 +35,31 @@ jQuery(document).ready(function($) {
 	});
 	
 	
+	// Set focus
+	
 	$(window).on('scroll', function() {
     	
-    	if ($('body').hasClass('fp-viewing-typography')) {
-				alert('TYPO');
+    	if ($('body').hasClass('fp-viewing-cover')) {
+			window.location.hash = '#fullpage';
 		}
+		else if ($('body').hasClass('fp-viewing-a11y')) {
+			window.location.hash = '#a11y_section';
+		}
+    	else if ($('body').hasClass('fp-viewing-typography')) {
+			window.location.hash = '#typography_section';
+		}
+		else if ($('body').hasClass('fp-viewing-navigation')) {
+			window.location.hash = '#navigation_section';
+		}
+		else if ($('body').hasClass('fp-viewing-forms')) {
+			window.location.hash = '#forms_section';
+		}
+		else if ($('body').hasClass('fp-viewing-colors')) {
+			window.location.hash = '#colors_section';
+		}
+		else if ($('body').hasClass('fp-viewing-images')) {
+			window.location.hash = '#images_section';
+		}				
 	});
 	  
   
