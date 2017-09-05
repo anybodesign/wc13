@@ -15,7 +15,13 @@
 	& .inner {
 		padding-top: 64px;
 	}
+	
 }
+.section-content {
+	position: relative;
+	z-index: 2;
+}
+
 .slide {
 	position: relative;
 }
@@ -40,15 +46,33 @@ div.bg-img {
 
 // Sliders
 
-.slicky-slider {
-}
+.slicky-slider {}
 
 
 
 // Titles
 
 .title-std {
+	position: relative;
+	display: inline-block;
+	background-color: $primary-color;
+	color: #fff;
+	padding: $grid-padding/2 $grid-padding;
+	margin-bottom: 10rem;
 	
+	z-index: 1;
+	
+	&::after {
+		content: '';
+		display: block;
+		width: 426px; 
+		height: 213px;
+		background: url(img/icon/star-yellow.svg) center bottom no-repeat;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: -213px;
+	}
 }
 
 
@@ -56,6 +80,7 @@ div.bg-img {
 
 .a11y-title {
 	font-size: 9.2rem;
+	margin-bottom: 0;
 }
 .a11y-numeronym,
 .a11y-number {

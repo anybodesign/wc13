@@ -128,12 +128,16 @@
 	
 		<div class="section" id="typography_section">
 			
-			<h2 class="title-std">
-				<span class="wow animated flipInX">Typographie</span>
-			</h2>
-			
-			<p>Nulla <a href="#">vitae</a> elit libero, a pharetra augue.</p>
-			
+			<div class="inner">
+				<h2 class="title-std wow animated slideInUp">
+					Typographie
+				</h2>
+				
+				<div class="section-content">
+					<p>Nulla <a href="#">vitae</a> elit libero, a pharetra augue.</p>
+				</div>
+			</div>
+
 		</div>
 
 
@@ -142,8 +146,8 @@
 	
 		<div class="section" id="navigation_section">
 			
-			<h2 class="title-std">
-				<span class="wow animated flipInX">Navigation</span>
+			<h2 class="title-std wow animated slideInUp">
+				Navigation
 			</h2>
 
 			<p>Nulla <a href="#">vitae</a> elit libero, a pharetra augue.</p>
@@ -207,7 +211,7 @@
 	$(document).ready(function() {
 		$('#fullpage').fullpage({
 			scrollBar:		true,
-			autoScrolling: false,
+			//autoScrolling: false,
 			loopHorizontal: false,
 			anchors: ['cover', 'a11y', 'typography', 'navigation', 'forms', 'colors', 'images'],
 			menu: '#main_nav ul',
