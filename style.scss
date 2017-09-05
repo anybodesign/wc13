@@ -63,7 +63,6 @@ body {
 	& .inner {
 		z-index: 2;
 		min-height: 335px;
-		margin-top: 60px;
 	}
 	
 	& .hand-btn {
@@ -113,13 +112,13 @@ body {
 	margin: 0;
 	text-align: left;
 	line-height: 1;
-	font-size: 6.6rem;
+	font-size: 6rem;
 	background-color: #fff;
 	padding: $grid-padding/1.5;
 	display: inline-block;
 	position: absolute;
-	right: 8%;
-	top: -40%;
+	right: 12%;
+	top: -26%;
 	
 	&::after {
 		content: '';
@@ -150,39 +149,6 @@ body {
 /* ------------------------- */
 /* = Content
 /* ------------------------- */
-
-
-.section, .slide {
-	text-align:center;	
-}
-
-.section {
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	overflow: hidden;
-}
-.slide {
-	position: relative;
-}
-
-.bg-img {
-	position: absolute;
-	width: 100%; 
-	height: auto;
-	top: 50%; left: 0;
-	transform: translateY(-50%);
-	z-index: -1;
-	
-	&.fitting {
-		height: 100%;
-		object-fit: cover;
-	}
-}
-div.bg-img {
-	height: 100%;
-}
 
 
 @import 'sass/content.scss';

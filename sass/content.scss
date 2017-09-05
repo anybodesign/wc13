@@ -1,9 +1,90 @@
-#fullpage {
-	
+// Common
+
+.section, .slide {
+	text-align:center;	
 }
+
+.section {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	overflow: hidden;
+	outline: none;
+	
+	& .inner {
+		padding-top: 64px;
+	}
+}
+.slide {
+	position: relative;
+}
+
+.bg-img {
+	position: absolute;
+	width: 100%; 
+	height: auto;
+	top: 50%; left: 0;
+	transform: translateY(-50%);
+	z-index: -1;
+	
+	&.fitting {
+		height: 100%;
+		object-fit: cover;
+	}
+}
+div.bg-img {
+	height: 100%;
+}
+
+
+// Sliders
+
+.slicky-slider {
+}
+
 
 
 // Titles
 
+.title-std {
+	
+}
 
 
+// A11Y
+
+.a11y-title {
+	font-size: 9.2rem;
+}
+.a11y-numeronym,
+.a11y-number {
+	font-size: 5.2rem;
+	margin-bottom: 0;
+}
+.a11y-numeronym {
+	font-family: $font-title;
+	
+	span {
+		color: $primary-color;
+	}
+}
+.a11y-number {
+	font-family: $font-title-light;
+	color: $primary-color;
+	
+	&::before {
+		content: '';
+		display: block;
+		margin: 0 auto;
+		width: 260px; height: 26px;
+		background: url(img/accolade.svg) center center no-repeat;
+		background-size: 260px 26px;
+	}
+	
+	&.large::before {
+		width: 480px;
+		height: 36px;
+		background-size: cover;
+	}
+}
