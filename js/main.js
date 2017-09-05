@@ -34,6 +34,15 @@ jQuery(document).ready(function($) {
 		dots: true
 	});
 	
+	$('.slicky-slider-dark').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: true,
+		dots: false
+	});
+	
+	
+	
 	
 	// Set focus
 	
@@ -44,6 +53,9 @@ jQuery(document).ready(function($) {
 		}
 		else if ($('body').hasClass('fp-viewing-a11y')) {
 			window.location.hash = '#a11y_section';
+		}
+		else if ($('body').hasClass('fp-viewing-a11y-icons')) {
+			window.location.hash = '#a11y_section_icons';
 		}
     	else if ($('body').hasClass('fp-viewing-typography')) {
 			window.location.hash = '#typography_section';

@@ -273,6 +273,10 @@ figcaption {
 	font-size: .85em; 
 	line-height: 1;
 	margin: .5em 0;
+	font-family: $font-title;
+	text-align: left;
+	padding-top: $grid-padding;
+	border-top: $primary-color 1px solid;
 }
 
 
@@ -376,14 +380,19 @@ input[type=submit].action-btn {
 	border-radius: 36px;
 	border: $secondary-color 5px solid; 
 	background: url(img/icon/hand-white.svg) center center no-repeat;
-	transition: background .4s ease-in-out;
-	@include a11y-hide();
+	transition: .4s ease-in-out;
+	@include a11y-hide(300px);
 	
 	&:focus, &:hover {
 		background-color: $secondary-color;
 		outline: none;
 	}
 	
+}
+
+.slick-prev,
+.slick-next {
+	@extend .hand-btn;
 }
 
 

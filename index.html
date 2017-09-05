@@ -34,6 +34,8 @@
 		<nav id="main_nav" role="navigation">
 			<ul class="main-menu">
 				<li data-menuanchor="a11y"><a href="#a11y">A11y</a></li>
+					<li data-menuanchor="a11y-devices" class="hidden"><a href="#a11y-devices">Devices</a></li>
+					<li data-menuanchor="a11y-icons" class="hidden"><a href="#a11y-icons">Icons</a></li>
 				<li data-menuanchor="typography"><a href="#typography">Typographie</a></li>
 				<li data-menuanchor="navigation"><a href="#navigation">Navigation</a></li>
 				<li data-menuanchor="forms"><a href="#forms">Formulaires</a></li>
@@ -94,7 +96,7 @@
 						<div class="a11y-slider slicky-slider">
 							
 							<div class="slicky-slide">
-								<h2 class="a11y-title">a11y ?</h2>
+								<h2 class="a11y-title">a11y</h2>
 							</div>
 							<div class="slicky-slide">
 								<p class="a11y-numeronym"><span>a</span>ccessibilit<span>y</span></p>
@@ -121,7 +123,55 @@
 			</div>
 			
 		</div>
+		
+		<div class="section" style="background-image: url(img/devices.jpg);">
+			<p class="a11y-devices-title wow animated fadeInUp">
+				Lecteur d'écran et plage braille
+			</p>
+		</div>
+		
+		<div class="section" id="a11y_section_icons">
+			
+			<div class="inner">
+				
+				<div class="a11y-icons-slider slicky-slider-dark">
 
+					<div class="slicky-slide">
+						<div class="a11y-icons">
+							<img src="img/icon/a11y.svg" alt="icone accessibilité">
+							<p class="a11y-icons-title">
+								le web doit être accessible à tout le monde
+								<span>Tim Berners-Lee, fondateur du W3C</span>
+							</p>
+						</div>
+					</div>
+					
+					<div class="slicky-slide">
+						<div class="a11y-icons">
+							<img src="img/icon/graph.svg" alt="icone pie chart">
+							<p class="a11y-icons-title">
+								20% de la population
+								<span>12 millions de français en situation de handicap</span>
+							</p>
+						</div>
+					</div>
+					
+					<div class="slicky-slide">
+						<div class="a11y-icons">
+							<img src="img/icon/IE.svg" alt="icone internet explorer">
+							<p class="a11y-icons-title">
+								- de 7%
+								<span>d'utilisateurs de IE 6 à IE 10 confondus</span>
+							</p>
+						</div>
+					</div>
+
+					
+				</div>
+				
+			</div>
+			
+		</div>
 
 	<!-- 	// Typography ***** -->
 	
@@ -129,7 +179,7 @@
 		<div class="section" id="typography_section">
 			
 			<div class="inner">
-				<h2 class="title-std wow animated slideInUp">
+				<h2 class="title-std wow animated wobble">
 					Typographie
 				</h2>
 				
@@ -146,11 +196,15 @@
 	
 		<div class="section" id="navigation_section">
 			
-			<h2 class="title-std wow animated slideInUp">
-				Navigation
-			</h2>
-
-			<p>Nulla <a href="#">vitae</a> elit libero, a pharetra augue.</p>
+			<div class="inner">
+				<h2 class="title-std wow animated slideInUp">
+					Navigation
+				</h2>
+	
+				<div class="section-content">
+					<p>Nulla <a href="#">vitae</a> elit libero, a pharetra augue.</p>
+				</div>
+			</div>
 			
 		</div>
 
@@ -160,11 +214,15 @@
 	
 		<div class="section" id="forms_section">
 			
-			<h2 class="title-std">
-				<span class="wow animated flipInX">Formulaires</span>
-			</h2>
-
-			<p>Nulla <a href="#">vitae</a> elit libero, a pharetra augue.</p>
+			<div class="inner">
+				<h2 class="title-std wow animated lightSpeedIn">
+					Formulaires
+				</h2>
+				
+				<div class="section-content">
+					<p>Nulla <a href="#">vitae</a> elit libero, a pharetra augue.</p>
+				</div>
+			</div>
 			
 		</div>			
 
@@ -172,13 +230,13 @@
 	<!-- 	// Colors ***** -->
 	
 	
-		<div class="section" id="colors_section">
+		<div class="section" id="colors_section" style="background-image: url(img/cocktail.jpg);">
 			
-			<h2 class="title-std">
-				<span class="wow animated flipInX">Couleurs</span>
-			</h2>
-
-			<p>Nulla <a href="#">vitae</a> elit libero, a pharetra augue.</p>
+			<div class="inner">
+				<h2 class="title-std wow animated jackInTheBox">
+					Couleurs
+				</h2>
+			</div>
 			
 		</div>	
 
@@ -188,12 +246,74 @@
 	
 		<div class="section" id="images_section">
 			
-			<h2 class="title-std">
-				<span class="wow animated flipInX">Images et pictos</span>
-			</h2>
+			<div class="inner">
+				<h2 class="title-std wow animated tada">
+					Images et pictos
+				</h2>
 
-			<p>Nulla <a href="#">vitae</a> elit libero, a pharetra augue.</p>
+				<div class="section-content">
+					<div class="images-slider slicky-slider">
+						
+						<div class="slicky-slide">
+							<div class="row">
+								<figure class="col-4">
+									<img src="img/hamac.jpg" alt="sieste dans mon hamac">
+									<figcaption>
+										Quelques instants de réflexion
+									</figcaption>
+								</figure>
+								<figure class="col-4">
+									<img src="img/boules.jpg" alt="boules de pétanques">
+									<figcaption>
+										Les pieds-tanqués
+									</figcaption>
+								</figure>
+								<figure class="col-4">
+									<img src="img/calanques.jpg" alt="calanques de Marseille">
+									<figcaption>
+										La plage ? Non, les calanques…
+									</figcaption>
+								</figure>
+							</div>
+						</div>
+						
+						<div class="slicky-slide">
+							<div class="row x-center">
+								<figure class="centered col-8">
+									<img src="img/icons.png" alt="icones sans libellés">
+								</figure>
+							</div>
+						</div>
+						
+						<div class="slicky-slide">
+							<div class="row x-center">
+								<figure class="centered col-8">
+									<img src="img/icons2a.png" alt="icones sans libellés">
+								</figure>
+							</div>
+						</div>
+						
+						<div class="slicky-slide">
+							<div class="row x-center">
+								<figure class="centered col-8">
+									<img src="img/icons2b.png" alt="icones avec libellés">
+								</figure>
+							</div>
+						</div>
+						
+						<div class="slicky-slide">
+							<div class="row x-center">
+								<div class="centered col-3">
+									<img src="img/icons3.png" alt="picto mystérieux">
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
 			
+			</div>
+
 		</div>		
 	
 		
@@ -213,10 +333,11 @@
 			scrollBar:		true,
 			//autoScrolling: false,
 			loopHorizontal: false,
-			anchors: ['cover', 'a11y', 'typography', 'navigation', 'forms', 'colors', 'images'],
+			anchors: ['cover', 'a11y', 'a11y-devices', 'a11y-icons', 'typography', 'navigation', 'forms', 'colors', 'images'],
 			menu: '#main_nav ul',
 			css3: true,
 			scrollingSpeed:	1000,
+			scrollOverflow: true
 		});		
 	});
 	new WOW().init();

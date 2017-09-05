@@ -109,6 +109,10 @@
 			}
 		}
 		
+		&.hidden, &.hidden a {
+			display: none;	
+		}
+		
 		a {
 			display: inline-block;
 			padding: $grid-padding*2 $grid-padding;

@@ -2,13 +2,10 @@
 
 .section, .slide {
 	text-align:center;	
-}
 
-.section {
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
 	overflow: hidden;
 	outline: none;
 	
@@ -17,6 +14,11 @@
 	}
 	
 }
+
+.section {
+	background-attachment: fixed;
+}
+
 .section-content {
 	position: relative;
 	z-index: 2;
@@ -42,12 +44,6 @@
 div.bg-img {
 	height: 100%;
 }
-
-
-// Sliders
-
-.slicky-slider {}
-
 
 
 // Titles
@@ -77,6 +73,7 @@ div.bg-img {
 
 
 // A11Y
+
 
 .a11y-title {
 	font-size: 9.2rem;
@@ -113,3 +110,72 @@ div.bg-img {
 		background-size: cover;
 	}
 }
+
+.a11y-devices-title {
+	position: absolute;
+	bottom: $grid-padding*2;
+	right: $grid-padding*2;
+	padding: $grid-padding;
+	max-width: 30rem;
+	
+	font-size: 3.2rem;
+	line-height: 1;
+	font-family: $font-title;
+	color: $primary-color;
+	background-color: #fff;
+	text-align: left;
+	margin-bottom: 0;		
+}
+
+#a11y_section_icons {
+	background-color: $secondary-color;
+	
+	p {
+		color: #fff;
+	}
+}
+.a11y-icons {
+	text-align: center;
+	
+	img {
+		margin: 0 auto 2em auto;
+	}
+}
+.a11y-icons-title {
+	color: #fff;
+	font-family: $font-title;
+	font-size: 3.2rem;
+	
+	span {
+		display: block;
+		font-family: $font-regular;
+		font-size: 1.6rem;
+	}
+}
+
+
+
+
+
+
+
+// Images
+
+.images-slider {
+	
+	.slicky-slide,
+	.row {
+		height: 360px;
+	}
+	
+	.centered {
+		position: relative;
+		
+		img {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}
+
