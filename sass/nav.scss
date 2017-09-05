@@ -1,0 +1,129 @@
+// Skiplinks
+
+
+#skiplinks_nav {
+	position: absolute; 
+	padding-top: 0;
+}
+.skiplinks-menu {
+	
+	a {
+		position: fixed; 
+		top: -65px;
+		padding: $grid-padding;
+		background-color: #000;
+		font-family: $font-bold;
+		color: #fff;
+		text-decoration: none;
+		transition: top .2s ease-in;
+	
+		&:focus {
+			top: -5px;
+		}
+
+	}
+}
+
+
+// Contrast
+
+.contrast-switch {
+	position: fixed;
+}
+
+// Main nav
+
+
+#main_nav {
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%;
+	height: 60px;
+	background-color: $secondary-color;
+	z-index: 900;
+}
+
+.main-menu {
+	
+	display: none;
+	
+	& > li {
+		position: relative;
+		display: block;
+		color: #fff;
+		
+		@include rwd(medium) {
+			display: inline-block;
+			margin-right: $grid-padding;
+		}
+		
+		a {
+			
+		}
+		a:hover, a:focus,
+		&.current-menu-item a {
+			
+		}
+		
+		
+	}
+	
+	@include rwd(medium) {
+		display: block;
+	}
+	
+}
+
+
+
+#menu-toggle {
+
+	// Hamburger Menu
+	
+	display: block; 
+	height: 23px; width: 23px;
+	position: relative;
+	border: 0; border-radius: 0; padding: 0;
+	cursor: pointer;
+	@include a11y-hide(60px);
+
+	span {
+		position: absolute; 
+		top: 10px; right: 0;
+	}
+	span, span::after, span::before {
+		display: block;
+		width: 23px; height: 3px;
+		background-color: #000;
+		transition: all .3s linear;
+	}
+	span::after, span::before {
+		position: absolute;
+		content: ""; 
+	}
+	span::after {bottom: -9px; left: 0;}
+	span::before {top: -9px; left: 0;}
+
+	&.menu-opened span {
+		background-color: transparent; 
+		height: 1px;
+	}
+	&.menu-opened span::after {
+		top: 0;
+		transform: rotate(45deg);
+		background-color: $primary-color;
+	}
+	&.menu-opened span::before {
+		top: 0;
+		transform: rotate(-45deg);
+		background-color: $primary-color;
+	}
+
+	&:hover {
+		background-color: transparent;
+	}	
+	
+	@include rwd(medium) {
+		display: none;				
+	}
+}

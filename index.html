@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>Un design accessible - WordCamp Marseille 2017</title>
+	<meta name="author" content="Thomas Villain">
+	<meta name="description" content="Dans le cadre d'un projet web, intégrer l'accessibilité commence dès la conception graphique.">
+
+	<link rel="stylesheet" type="text/css" href="css/pridx.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+	<link rel="stylesheet" type="text/css" href="css/slick.css">
+	<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	
+<div id="wrapper">
+
+
+	<!-- 	// Head ***** -->
+	
+	<header id="app_head" role="banner">
+		
+		<nav id="skiplinks_nav" role="navigation">
+			<ul class="skiplinks-menu">
+				<li class="skiplinks-menu--item"><a href="#main_nav">Aller au menu</a></li>
+				<li class="skiplinks-menu--item"><a href="#fullpage">Aller au contenu</a></li>
+			</ul>
+		</nav>
+		
+		<nav id="main_nav" role="navigation">
+			<ul class="main-menu" id="main_menu">
+				<li class="main-menu--item"><a href="#a11y">A11y</a></li>
+				<li class="main-menu--item"><a href="#typography">Typographie</a></li>
+				<li class="main-menu--item"><a href="#navigation">Navigation</a></li>
+				<li class="main-menu--item"><a href="#forms">Formulaires</a></li>
+				<li class="main-menu--item"><a href="#colors">Couleurs</a></li>
+				<li class="main-menu--item"><a href="#images">Images</a></li>			
+			</ul>
+		</nav>
+		
+		<a href="#" class="contrast-switch">Fort contraste</a>
+		
+	</header>
+	
+	
+	
+	<div id="fullpage">
+	
+		
+	<!-- 	// Cover ***** -->
+	
+	
+		<div class="section cover-section">
+			
+			<h1 class="title-main wow animated bounceIn" data-wow-delay="0.25s">
+				un
+				<br>
+				design
+				<br>
+				accessible
+			</h1>
+			
+			<img class="cover-box" src="img/sardine-box.png" alt="visuel boite de sardines wordcamp marseille 2017">
+			<img class="cover-star fitting animated fadeIn" data-src="img/icon/star.svg" alt="motif étoile">
+		</div>
+		
+	<!-- 	// A11y ***** -->
+	
+	
+		<div class="section">
+			
+			<h2 class="title-std">
+				<span class="wow animated flipInX">Bonjour</span>
+			</h2>
+			
+		</div>
+
+
+	<!-- 	// Typography ***** -->
+	
+	
+		<div class="section">
+			
+			<h2 class="title-std">
+				<span class="wow animated flipInX">Typographie</span>
+			</h2>
+			
+		</div>
+	
+	
+	
+		
+	</div> <!-- End fullPage -->
+</div>
+
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.fullPage.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/wow.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+		$('#fullpage').fullpage({
+			scrollBar:		true,
+			//controlArrows: 	false,
+			loopHorizontal: false,
+			scrollingSpeed:	1000,
+			anchors: ['cover', 'a11y', 'typography'],
+			menu: '#main_nav ul',
+		});		
+	});
+	new WOW().init();
+</script>
+
+
+</body>
+</html>
