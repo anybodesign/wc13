@@ -155,7 +155,26 @@ div.bg-img {
 
 
 
+// Navigation
 
+.nav-slider {
+	padding: 5em 0;
+}
+.nav-slide {
+	text-align: left;
+	
+	h3 {
+		font-size: 3.2rem;
+		text-transform: uppercase;
+		
+		&.lowercase {
+			text-transform: lowercase;
+		}
+	}
+	img {
+		margin: 0 auto;
+	}
+}
 
 
 

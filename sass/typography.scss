@@ -116,17 +116,36 @@ a:hover {
 }
 
 p a {
-	padding-bottom: .25rem;
+	padding-bottom: .15rem;
 	text-decoration: none;
-	border-bottom: $secondary-color 2px solid;
+	border-bottom: $primary-color 3px solid;
+	color: $primary-color;
 	transition: border .2s ease-in-out;
 	
+	&:active {
+		border-bottom-color: $third-color;
+		border-bottom-width: 5px;
+	}
+	&:visited {
+		border-bottom: $secondary-color 3px dashed;
+		color: $secondary-color;
+	}
 	&:hover,
 	&:focus {
-		color: $primary-color;
-		border-bottom-color: $primary-color;
-		border-bottom-width: 4px;
+		padding-bottom: .1rem;
+		color: $secondary-color;
+		border-bottom-color: $secondary-color;
+		border-bottom-width: 5px;
 		outline: none;
+	}
+	
+	&[target="_blank"]::after {
+		content: '';
+		display: inline-block;
+		width: 10px; height: 10px;
+		vertical-align: middle;
+		background: url(img/icon/external.svg) 0 0 no-repeat;
+		margin-left: 3px;
 	}
 }
 
