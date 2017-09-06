@@ -209,8 +209,11 @@ blockquote {
 q,
 blockquote,
 blockquote p {
-	font-family: $font-bolditalic;
-	font-style: normal;
+	//font-family: $font-bolditalic;
+	font-family: Georgia, serif;
+	font-style: italic;
+	font-weight: bold;
+	//font-style: normal;
 	font-size: 2rem;
 }
 blockquote p {

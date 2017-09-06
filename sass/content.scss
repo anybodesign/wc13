@@ -79,6 +79,16 @@ div.bg-img {
 
 // A11Y
 
+.highcontrast .a11y-icons-slider {
+	
+	.slick-next,
+	.slick-prev {
+		
+		&:hover, &:focus {
+			border-color: #fff
+		}
+	}
+}
 
 .a11y-title {
 	font-size: 9.2rem;

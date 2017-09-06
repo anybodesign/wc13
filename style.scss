@@ -183,3 +183,87 @@ body {
 }
 
 
+// Slick
+
+
+.slick-list {
+    .slick-loading & {
+        background: #fff url(img/ajax-loader.gif) center center no-repeat;
+    }
+}
+.slick-slide {
+	outline: none;
+}
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+	
+	&:hover, &:focus {
+        border-color: #fff;
+    }
+    &.slick-disabled {
+        display: none !important;
+    }
+}
+
+.slick-prev {
+	left: -2.5rem;
+	transform: rotate(90deg);
+}
+.slick-next {
+	right: -2.5rem;
+	transform: rotate(90deg) scaleY(-1);
+}
+
+
+.slick-dots {
+	position: absolute;
+	bottom: -35px;
+	width: 100%;
+	margin: 0;
+	padding: 0; 
+	list-style: none;
+	text-align: center;
+	
+	li {
+		display: inline-block;
+		margin: $grid-padding;
+		
+		button {
+			padding: 0;
+			display: block;
+			width: 12px; height: 12px;
+			margin: 0 5px;
+			border-radius: 12px;
+			background-color: $primary-color;
+			@include a11y-hide();
+			transition: .2s ease-in-out;
+			
+			.highcontrast & {
+				background-color: #999;
+			}
+			
+			&:hover, &:focus {
+				transform: scale(1.6);
+				outline: none;
+			}
+		}
+		
+		&.slick-active button {
+			background-color: $secondary-color;
+
+				.highcontrast & {
+					background-color: #000;
+				}
+
+		}
+
+	}
+}
+
+
+
