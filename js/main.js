@@ -95,7 +95,7 @@ jQuery(document).ready(function($) {
     
     // When the element is clicked
    
-    $("a.toggle-highcontrast").click(function () {
+    $(".toggle-highcontrast").click(function () {
         
         if ($.cookie('highcontrast') === "undefined" || $.cookie('highcontrast') === "no") {
            
@@ -116,7 +116,7 @@ jQuery(document).ready(function($) {
         }
     });
     
-    $("a.toggle-remove").click(function () {
+    $(".toggle-remove").click(function () {
         $('body').removeClass('highcontrast');
         if ($.cookie('highcontrast') === "yes") {
             $.cookie("highcontrast", null, {

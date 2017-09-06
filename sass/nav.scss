@@ -69,18 +69,21 @@
 		background: url(img/icon/contrast.svg) 0 0 no-repeat;
 	}
 	
-	& a {
+	& button {
 		position: relative;
 		display: block;
 		font-family: $font-title;
 		color: #fff;
 		text-decoration: none;
 		font-size: 1.3rem;
+		padding: 0;
+		background-color: transparent;
 	}
 	
-	& a:focus, & a:hover {
+	& button:focus, & button:hover {
 		border-bottom: #fff 2px solid;
 		outline: none;
+		background-color: transparent;
 	}
 }
 
