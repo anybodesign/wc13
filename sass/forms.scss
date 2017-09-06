@@ -42,6 +42,12 @@ select {
 		outline: none;
 		border-width: 2px;
 	}
+
+	.highcontrast & {
+		color: #000;
+		border-color: #000;
+	}	
+	
 }
 
 /*
@@ -52,6 +58,11 @@ input[value=""] {
 
 select:focus {
 	background-color: lighten($primary-color, 20%);
+
+	.highcontrast & {
+		background-color: #ccc;
+	}	
+	
 }
 
 input[type="search"] {
@@ -71,7 +82,12 @@ input[type="radio"] {
 input[type="checkbox"]:focus + label, 
 input[type="radio"]:focus + label {
 	padding-bottom: .25em; 
-	border-bottom: $primary-color 3px solid; 
+	border-bottom: $primary-color 3px solid;
+
+	.highcontrast & {
+		border-color: #000;
+	}	
+	 
 }
 input[type="checkbox"], input[type="radio"],
 input[type="checkbox"] + label, input[type="radio"] + label {
@@ -105,6 +121,11 @@ legend {
 	font-size: 1.4rem;
 	padding-bottom: $grid-padding/2;
 	border-bottom: $primary-color 2px solid;
+
+	.highcontrast & {
+		border-color: #777;
+	}	
+	
 }
 
 button,
@@ -177,6 +198,11 @@ input[type="reset"]:focus {
 ::-webkit-input-placeholder {
 	font-family: $font-italic;
 	color: $primary-color;
+
+	.highcontrast & {
+		color: #666;
+	}	
+	
 }
 
 
@@ -246,6 +272,11 @@ input[type="reset"]:focus {
 	border-radius: 100%;
 	opacity: 0;
 	transition: opacity .2s linear;
+
+	.highcontrast & {
+		background-color: #000;
+	}	
+	
 }
 .formfield-radio input[type="radio"]:checked + label::after {
 	opacity: 1;
@@ -261,6 +292,11 @@ input[type="reset"]:focus {
 	opacity: 0;
 	transform: scaleX(-1) rotate(-45deg);
 	transition: opacity .2s linear;
+
+	.highcontrast & {
+		color: #000;
+	}	
+	
 }
 .formfield-checkbox input[type="checkbox"]:checked + label::after {
 	opacity: 1;
@@ -290,6 +326,11 @@ input[type="reset"]:focus {
 		border-width: 6px;
 		border-style: solid;
 		pointer-events: none;
+	
+		.highcontrast & {
+			border-top-color: #000;
+		}	
+		
 	}
 	
 	& select {

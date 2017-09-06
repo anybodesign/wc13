@@ -39,7 +39,12 @@
 			}
 		}
 
+		.highcontrast & {
+			background-color: #000;
+		}
+
 	}
+	
 }
 
 
@@ -51,22 +56,26 @@
 	top: 0;
 	padding-top: $grid-padding*2;
 	padding-bottom: $grid-padding;
+	padding-left: 22px;
 	z-index: 900;
 	
 	&::before {
 		content: '';
-		display: inline-block;
+		display: block;
 		width: 16px; height: 16px;
+		position: absolute;
+		top: $grid-padding*2;
+		left: 0;
 		background: url(img/icon/contrast.svg) 0 0 no-repeat;
-		vertical-align: middle;
-		margin-right: $grid-padding/2;
 	}
 	
 	& a {
+		position: relative;
+		display: block;
 		font-family: $font-title;
 		color: #fff;
 		text-decoration: none;
-		font-size: 1.4rem;
+		font-size: 1.3rem;
 	}
 	
 	& a:focus, & a:hover {
@@ -74,6 +83,16 @@
 		outline: none;
 	}
 }
+
+.toggle-remove { display: none !important; }
+
+
+.highcontrast {
+	.toggle-highcontrast { display: none; }
+	.toggle-remove { display: block !important; }
+}
+
+
 
 // Main nav
 
@@ -84,6 +103,10 @@
 	width: 100%;
 	background-color: $secondary-color;
 	z-index: 800;
+	
+	.highcontrast & {
+		background-color: #000;
+	}
 }
 
 .main-menu {
@@ -123,6 +146,12 @@
 		&.active a {
 			background-color: $primary-color;
 			outline: none;
+
+			.highcontrast & {
+				background-color: #fff;
+				color: #000;
+			}	
+			
 		}
 		
 		

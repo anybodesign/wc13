@@ -59,6 +59,11 @@ body {
 
 .cover-section {
 	background: linear-gradient(to bottom, #7fc3e1 0%, #2a9cce 100%);
+
+	.highcontrast & {
+		background: #ccc;
+	}	
+	
 	
 	& .inner {
 		z-index: 2;
@@ -72,10 +77,21 @@ body {
 		transform: translateX(-50%);
 		background-color: $secondary-color;
 		z-index: 2;
+
+		.highcontrast & {
+			background-color: #000;
+		}	
+		
 		
 		&:focus,
 		&:hover {
 			background-color: transparent;
+
+			.highcontrast & {
+				background-color: #000;
+				opacity: .5;
+			}	
+			
 		}
 	}
 		
@@ -115,9 +131,10 @@ body {
 	font-size: 6rem;
 	background-color: #fff;
 	padding: $grid-padding/1.5;
+	color: $secondary-color;
 	display: inline-block;
 	position: absolute;
-	right: 12%;
+	right: 5%;
 	top: -26%;
 	
 	&::after {

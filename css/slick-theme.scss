@@ -218,11 +218,21 @@ $slick-opacity-not-active: 0.25 !default;
                 -moz-osx-font-smoothing: grayscale;
                 
                 transition: transform .2s ease-in-out;
+
+				.highcontrast & {
+					color: #999;
+				}	
+                
             }
         }
         &.slick-active button:before {
             color: $slick-dot-color-active;
             //opacity: $slick-opacity-default;
+
+			.highcontrast & {
+				color: #000;
+			}	
+            
         }
     }
 }

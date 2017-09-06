@@ -45,7 +45,8 @@
 		</nav>
 		
 		<div class="contrast-switch">
-			<a href="#">Fort contraste</a>
+			<a href="#" class="toggle-highcontrast">Fort contraste</a>
+			<a href="#" class="toggle-remove">Rétablir le contraste</a>
 		</div>
 		
 	</header>
@@ -193,9 +194,9 @@
 							Pour 10 personnes, compter 2h de préparation et 2h de cuisson :)</p>
 							
 							<h4 class="h3-like">Ingrédients</h4>
-							<div class="row nested inredients">
+							<div class="row nested bluecard">
 								<div class="col-6">
-									<p><strong>Pour les poissons, écaillés mais non vidés :</strong></p>
+									<p><strong>Pour les poissons,<br> écaillés mais non vidés :</strong></p>
 									<ul>
 										<li>600 g de lotte</li>
 										<li>600 g de rascasse</li>
@@ -238,18 +239,21 @@
 						</div>
 						
 						<div class="col-6">
-							<figure>
-								<a href="#" title="lancer la vidéo" class="player"><img src="img/bouillabaisse.jpg" alt="recette de la bouillabaisse"></a>
+							<h4 class="h3-like">La recette en vidéo</h4>
+							
+							<figure class="video-player">
+								<a href="#" title="lancer la vidéo" class="play"><img src="img/bouillabaisse.jpg" alt="recette de la bouillabaisse"></a>
 								<figcaption>
 									La bouillabaisse marseillaise
-									<button class="action-btn">Transcription de la vidéo</button>
-									<div class="transcript">
+									<button class="action-btn show-transcript">Transcription de la vidéo</button>
+									<div class="transcript bluecard">
 										<p>Peler, épépiner et concasser les tomates. Hacher les oignons, écraser l'ail. Emincer les blancs de poireaux. Mettre tous ces légumes dans une grande marmite. Vider les poissons, réserver les foies que l'on hachera. Couper les têtes et les queues, couper les pattes des cigales de mer. Ajouter les déchets des poissons (têtes et queues) et les cigales dans la marmite, ajouter 25 cl d'huile d'olive. Mettre également le fenouil, le laurier, le persil, les poivre en grains et la peau d'orange séchée.</p>
-										<p>Et le reste de la transcription</p>
+										<p>Et le reste de la transcription…</p>
 									</div>
 								</figcaption>
 							</figure>
 							
+							<h5>Récap'</h4>
 							<table>
 								<thead>
 									<th>Nombre de personnes</th>
@@ -258,8 +262,6 @@
 								<tbody>
 									<tr>
 										<td>10</td>
-									</tr>
-									<tr>
 										<td>4 heures</td>
 									</tr>
 								</tbody>
@@ -268,27 +270,34 @@
 						
 						<div class="col-12">
 							<h4 class="h3-like">Préparation</h4>
-						</div>
-						<div class="col-6">
-							<p>Peler, épépiner et concasser les tomates. Hacher les oignons, écraser l'ail. Emincer les blancs de poireaux. Mettre tous ces légumes dans une grande marmite. Vider les poissons, réserver les foies que l'on hachera. Couper les têtes et les queues, couper les pattes des cigales de mer. Ajouter les déchets des poissons (têtes et queues) et les cigales dans la marmite, ajouter 25 cl d'huile d'olive. Mettre également le fenouil, le laurier, le persil, les poivre en grains et la peau d'orange séchée.</p>
-							<p>Couvrir et faire cuire 15 min à feu moyen en remuant de temps en temps.</p>
-							<p>Faire bouillir 5 l d'eau à part. Mettre la marmite de légumes à vif et y verser l'eau bouillante. Saler, porter à ébullition et baisser le feu. Laisser mijoter 20 min. Au bout de ce temps, écumer passer la soupe au chinois en écrasant bien les légumes et morceaux de poisson. Rajouter le safran.</p>
-							<p>Couper les poissons en tronçons égaux, ou couper les plus gros en 2 ou 3.</p>
-							<p>Les faire cuire successivement dans la préparation précédente portée à ébullition sur feu vif : <strong>Le congre*</strong> cuit environ 10 min, le Saint-pierre 6 min, la lotte 4 min, la rascasse 4 min, le grondin 3 min et la vive 3 min.</p>
-						</div>
-						<div class="col-6">
-							<p>Les poissons ne doivent pas être complètement cuits, mais juste à point. Les sortir du bouillon et réserver dès qu'ils sont cuits.</p>
-							<p><strong>Préparer la rouille :</strong></p>
-							<p>Faire tremper le pain dans le lait. Eplucher, dégermer et piler l'ail avec les piments rouges épépinés. Rajouter la mie de pain trempée et essorée puis l'huile, sans cesser de piler. Saler, poivrer et délayer avec 1 cuillère à soupe de bouillon.</p>
-							<p>Pour servir la bouillabaisse : lier le bouillon avec les foies hachés des poissons en fouettant bien. Servir le bouillon lié dans les assiettes, et répartir les morceaux de poissons. Accompagner de tranches de pain de campagne frottées à l'ail et à l'huile et grillées, et de la rouille.</p>
-							<div class="uppercase-example">
-								<p>* On dit le palais des congrès !</p>
-								<p>Pas le palais des congres !</p>
+							
+							<div class="row nested">
+								<div class="col-6">
+									<p>Peler, épépiner et concasser les tomates. Hacher les oignons, écraser l'ail. Emincer les blancs de poireaux. Mettre tous ces légumes dans une grande marmite. Vider les poissons, réserver les foies que l'on hachera. Couper les têtes et les queues, couper les pattes des cigales de mer. Ajouter les déchets des poissons (têtes et queues) et les cigales dans la marmite, ajouter 25 cl d'huile d'olive. Mettre également le fenouil, le laurier, le persil, les poivre en grains et la peau d'orange séchée.</p>
+									<p>Couvrir et faire cuire 15 min à feu moyen en remuant de temps en temps.</p>
+									<p>Faire bouillir 5 l d'eau à part. Mettre la marmite de légumes à vif et y verser l'eau bouillante. Saler, porter à ébullition et baisser le feu. Laisser mijoter 20 min. Au bout de ce temps, écumer passer la soupe au chinois en écrasant bien les légumes et morceaux de poisson. Rajouter le safran.</p>
+									<p>Couper les poissons en tronçons égaux, ou couper les plus gros en 2 ou 3.</p>
+									<p>Les faire cuire successivement dans la préparation précédente portée à ébullition sur feu vif : <strong>Le congre*</strong> cuit environ 10 min, le Saint-pierre 6 min, la lotte 4 min, la rascasse 4 min, le grondin 3 min et la vive 3 min.</p>
+								</div>
+								
+								<div class="col-6">
+									<p>Les poissons ne doivent pas être complètement cuits, mais juste à point. Les sortir du bouillon et réserver dès qu'ils sont cuits.</p>
+									<p><strong>Préparer la rouille :</strong></p>
+									<p>Faire tremper le pain dans le lait. Eplucher, dégermer et piler l'ail avec les piments rouges épépinés. Rajouter la mie de pain trempée et essorée puis l'huile, sans cesser de piler. Saler, poivrer et délayer avec 1 cuillère à soupe de bouillon.</p>
+									<p>Pour servir la bouillabaisse : lier le bouillon avec les foies hachés des poissons en fouettant bien. Servir le bouillon lié dans les assiettes, et répartir les morceaux de poissons. Accompagner de tranches de pain de campagne frottées à l'ail et à l'huile et grillées, et de la rouille.</p>
+									<div class="uppercase-example">
+										<p>* On dit le palais des congrès !</p>
+										<p>Pas le palais des congres !</p>
+									</div>
+								</div>
 							</div>
+						
 						</div>
 						
 						<div class="col-8">
-							
+							<blockquote>
+								Vous pouvez changer les poissons selon vos goûts, la bouillabaisse se faisait traditionnellement avec la pêche du jour, et ajouter 1/2 verre de pastis dans la bouillabaisse pour accentuer le goût anisé. Vous pouvez également ajouter 1 pomme de terre par personne.
+							</blockquote>
 						</div>
 					</div>
 					
@@ -393,9 +402,9 @@ Ce pauvre focus n'est pas obligé d'être moche :)</p>
 				<div class="section-content">
 					<div class="row x-center">
 						
-						<div class="col-10">
-
-							<h3>Jeu-concours</h3>
+						<div class="col-10 form-intro">
+						
+							<h3 class="h2-like">Jeu-concours</h3>
 							<p>Répondez à ce questionnaire et participez à notre grand tirage au sort !<br>
 							Vous aurez peut-être la chance de gagner votre poids en savon de Marseille :).</p>
 						
@@ -604,6 +613,7 @@ Ce pauvre focus n'est pas obligé d'être moche :)</p>
 
 
 <script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
 <script src="js/scrolloverflow.min.js"></script>
 <script src="js/jquery.fullpage.js"></script>
 <script src="js/slick.min.js"></script>
@@ -619,7 +629,8 @@ Ce pauvre focus n'est pas obligé d'être moche :)</p>
 			menu: '#main_nav ul',
 			css3: false,
 			scrollingSpeed:	1000,
-			scrollOverflow: true
+			scrollOverflow: true,
+			//autoScrolling: false
 		});		
 	});
 	new WOW().init();
