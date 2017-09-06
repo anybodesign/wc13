@@ -126,10 +126,12 @@ p a {
 		border-bottom-color: $third-color;
 		border-bottom-width: 5px;
 	}
+/*
 	&:visited {
 		border-bottom: $secondary-color 3px dashed;
 		color: $secondary-color;
 	}
+*/
 	&:hover,
 	&:focus {
 		padding-bottom: .1rem;

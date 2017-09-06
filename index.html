@@ -124,11 +124,13 @@
 			
 		</div>
 		
+		
 		<div class="section" style="background-image: url(img/devices.jpg);">
 			<p class="a11y-devices-title wow animated fadeInUp">
 				Lecteur d'écran et plage braille
 			</p>
 		</div>
+		
 		
 		<div class="section" id="a11y_section_icons">
 			
@@ -247,8 +249,7 @@ Ce pauvre focus n'est pas obligé d'être moche :)</p>
 								</div>
 								<div class="col-6">
 									<h3 class="lowercase">.current-menu-item</h3>
-									<p>Ne pas oublier un style pour la page ou la catégorie en cours. 
-C'est un repère visuel important.</p>
+									<p>Ne pas oublier un style pour la page ou la catégorie en cours. C'est un repère visuel important.</p>
 								</div>
 							</div>
 						</div>
@@ -277,17 +278,114 @@ C'est un repère visuel important.</p>
 	
 	
 		<div class="section" id="forms_section">
-			
 			<div class="inner">
+				
 				<h2 class="title-std wow animated lightSpeedIn">
 					Formulaires
 				</h2>
 				
 				<div class="section-content">
-					<p>Nulla <a href="#">vitae</a> elit libero, a pharetra augue.</p>
+					<div class="row x-center">
+						
+						<div class="col-10">
+
+							<h3>Jeu-concours</h3>
+							<p>Répondez à ce questionnaire et participez à notre grand tirage au sort !<br>
+							Vous aurez peut-être la chance de gagner votre poids en savon de Marseille :).</p>
+						
+						</div>
+						
+						<div class="col-4">
+							
+							<form>
+								<fieldset>
+									<legend>Durée de votre séjour</legend>
+									<div class="formfield-select">
+										<div class="formfield-select--container">
+											<select>
+												<option>1 semaine</option>
+												<option>2 semaines</option>
+												<option>3 semaines</option>
+												<option>1 mois</option>
+												<option>3 mois</option>
+												<option>Encore plus ?</option>										
+											</select>
+										</div>
+									</div>
+								</fieldset>
+								
+								<fieldset>
+									<legend>Activité préférée</legend>
+									
+									<div class="row nested">
+										<div class="col-6">
+											<div class="formfield-checkbox">
+												<input type="checkbox" id="football">
+												<label for="football">Football</label>
+											</div>
+											<div class="formfield-checkbox">
+												<input type="checkbox" id="petanque">
+												<label for="petanque">Pétanque</label>
+											</div>
+											<div class="formfield-checkbox">
+												<input type="checkbox" id="apero">
+												<label for="apero">Apéro</label>
+											</div>
+										</div>
+										<div class="col-6">
+											<div class="formfield-checkbox">
+												<input type="checkbox" id="sieste">
+												<label for="sieste">Sieste</label>
+											</div>
+											<div class="formfield-checkbox">
+												<input type="checkbox" id="cuisine">
+												<label for="cuisine">Cuisine</label>
+											</div>
+											<div class="formfield-checkbox">
+												<input type="checkbox" id="marcel">
+												<label for="marcel">Port du marcel</label>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+								
+								<fieldset>
+									<legend>Civilité</legend>
+									<div class="formfield-radio">
+										<input type="radio" id="monsieur" name="genre">
+										<label for="monsieur">M.</label>
+									</div>
+									<div class="formfield-radio">
+										<input type="radio" id="madame" name="genre">
+										<label for="madame">Mme</label>
+									</div>
+								</fieldset>
+								
+								<fieldset>
+									<legend>Qui êtes-vous ?</legend>
+									<div class="formfield-text">
+										<label for="nom">Nom et prénom</label>
+										<input type="text" id="nom" placeholder="Ex: Fernand Joseph Désiré Contandin">
+									</div>
+									<div class="formfield-text">
+										<label for="email">Adresse e-mail</label>
+										<input type="email" id="email" placeholder="Ex: coucou@marseille.fr">
+									</div>
+									<div class="formfield-textarea">
+										<label for="message">Un petit message</label>
+										<textarea id="message" placeholder="Ex: Je passe de bonnes vacances dans le sud, bisous."></textarea>
+									</div>
+								</fieldset>
+								
+								
+							</form>
+								
+						</div>
+						
+					</div>
 				</div>
+				
 			</div>
-			
 		</div>			
 
 
@@ -394,8 +492,7 @@ C'est un repère visuel important.</p>
 <script>
 	$(document).ready(function() {
 		$('#fullpage').fullpage({
-			scrollBar:		true,
-			//autoScrolling: false,
+			//scrollBar:		true,
 			loopHorizontal: false,
 			anchors: ['cover', 'a11y', 'a11y-devices', 'a11y-icons', 'typography', 'navigation', 'forms', 'colors', 'images'],
 			menu: '#main_nav ul',

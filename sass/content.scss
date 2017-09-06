@@ -177,6 +177,28 @@ div.bg-img {
 }
 
 
+// Forms
+
+#forms_section {
+	
+	&::after,
+	&::before {
+		content: '';
+		display: block;
+		width: 290px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		background: url(img/icon/pattern.svg) 0 0 repeat-y;
+	}
+	&::before {
+		left: $grid-padding*2;
+	}
+	&::after {
+		right: $grid-padding*2;
+	}
+}
+
 
 // Images
 
