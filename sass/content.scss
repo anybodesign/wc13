@@ -180,6 +180,7 @@ div.bg-img {
 // Forms
 
 #forms_section {
+	padding: 5em 0 0 0;
 	
 	&::after,
 	&::before {
@@ -196,6 +197,10 @@ div.bg-img {
 	}
 	&::after {
 		right: $grid-padding*2;
+	}
+	
+	form {
+		padding-bottom: 10em;
 	}
 }
 
