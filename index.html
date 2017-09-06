@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="fr">
 <head>
 	<meta charset="utf-8">
 	<title>Un design accessible - WordCamp Marseille 2017</title>
@@ -22,9 +23,9 @@
 
 <!-- 	// Head ***** -->
 	
-	<header id="app_head" role="banner">
+	<header id="app_head">
 		
-		<nav id="skiplinks_nav" role="navigation">
+		<nav id="skiplinks_nav">
 			<ul class="skiplinks-menu">
 				<li><a href="#main_nav">Aller au menu</a></li>
 				<li><a href="#fullpage">Aller au contenu</a></li>
@@ -45,8 +46,8 @@
 		</nav>
 		
 		<div class="contrast-switch">
-			<button class="toggle-highcontrast">Fort contraste</button>
-			<button class="toggle-remove">Rétablir le contraste</button>
+			<button class="toggle-highcontrast" type="button">Fort contraste</button>
+			<button class="toggle-remove" type="button">Rétablir le contraste</button>
 		</div>
 		
 	</header>
@@ -245,7 +246,7 @@
 								<a href="#" title="lancer la vidéo" class="play"><img src="img/bouillabaisse.jpg" alt="recette de la bouillabaisse"></a>
 								<figcaption>
 									La bouillabaisse marseillaise
-									<button class="action-btn show-transcript">Transcription de la vidéo</button>
+									<button class="action-btn show-transcript" type="button">Transcription de la vidéo</button>
 									<div class="transcript bluecard">
 										<p>Peler, épépiner et concasser les tomates. Hacher les oignons, écraser l'ail. Emincer les blancs de poireaux. Mettre tous ces légumes dans une grande marmite. Vider les poissons, réserver les foies que l'on hachera. Couper les têtes et les queues, couper les pattes des cigales de mer. Ajouter les déchets des poissons (têtes et queues) et les cigales dans la marmite, ajouter 25 cl d'huile d'olive. Mettre également le fenouil, le laurier, le persil, les poivre en grains et la peau d'orange séchée.</p>
 										<p>Et le reste de la transcription…</p>
@@ -253,11 +254,14 @@
 								</figcaption>
 							</figure>
 							
-							<h5>Récap'</h4>
+							<h5>Récap'</h5>
+							
 							<table>
 								<thead>
-									<th>Nombre de personnes</th>
-									<th>Temps de préparation</th>
+									<tr>
+										<th>Nombre de personnes</th>
+										<th>Temps de préparation</th>
+									</tr>
 								</thead>
 								<tbody>
 									<tr>
@@ -265,7 +269,8 @@
 										<td>4 heures</td>
 									</tr>
 								</tbody>
-							</table>	
+							</table>
+								
 						</div>
 						
 						<div class="col-12">
@@ -417,13 +422,14 @@ Ce pauvre focus n'est pas obligé d'être moche :)</p>
 									<legend>Durée de votre séjour</legend>
 									<div class="formfield-select">
 										<div class="formfield-select--container">
-											<select>
+											<label for="duree">Combien de temps resterez-vous ?</label>
+											<select id="duree">
 												<option>1 semaine</option>
 												<option>2 semaines</option>
 												<option>3 semaines</option>
 												<option>1 mois</option>
 												<option>3 mois</option>
-												<option>Encore plus ?</option>										
+												<option>Encore plus</option>										
 											</select>
 										</div>
 									</div>
