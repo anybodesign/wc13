@@ -4,6 +4,7 @@ Description: Un design accessible
 Author: Thomas Villain
 Author URI: https://anybodesign.com/
 Project URI: https://lab.anybodesign.com/wc13/
+Project source code: https://github.com/anybodesign/wc13/
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -112,7 +113,8 @@ body {
 	z-index: 1;
 }
 .infinite-rotation {
-	animation: rotate-forever 20s linear infinite;
+	animation: rotate-once 5s;
+	//animation: rotate-forever 5s linear infinite;
 }
 @keyframes rotate-forever {
   from {
@@ -121,6 +123,15 @@ body {
 
   to {
     transform: rotate(359deg);
+  }
+}
+@keyframes rotate-once {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(90deg);
   }
 }
 
