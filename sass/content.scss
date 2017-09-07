@@ -398,3 +398,15 @@ div.bg-img {
 	}
 }
 
+
+// Merci
+
+
+#thanks_section {
+	background: linear-gradient(to top, #7fc3e1 0%, #2a9cce 100%);
+
+	.highcontrast & {
+		background: #ccc;
+	}
+}
+
