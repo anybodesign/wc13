@@ -1,27 +1,34 @@
 // Common
 
-.section {
+.section,
+.subsection {
 	position: relative;
 	text-align: center;
 	overflow: hidden;
 	
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	
 	min-height: 720px;	// note: support 1280x720	
-	padding-top: 100px;
 
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	
+	outline: none;
+	
 	& .inner {
 		width: 100%;
 	}
-	
 }
+
+.subsection {
+	width: 100%;
+}
+
 
 .section-content {
 	position: relative;
@@ -83,16 +90,48 @@ div.bg-img {
 
 // A11Y
 
-.highcontrast .a11y-icons-slider {
+#a11y {
+	
+	.subsection {
+		.hand-btn {
+			position: absolute;
+			bottom: $grid-padding*2;
+			left: 50%;
+			margin-left: -36px;
+			z-index: 2;
+	
+			&:focus,
+			&:hover {
+				background-color: $primary-color;
+				border-color: $primary-color;
+	
+				.highcontrast & {
+					background-color: #666;
+					border-color: #666;
+				}	
+				
+			}
+		}
+	}	
+}
+
+.a11y-icons-slider {
 	
 	.slick-next,
 	.slick-prev {
 		
 		&:hover, &:focus {
-			border-color: #fff
+			border-color: #fff;
+			background-color: transparent;
+			
+			.highcontrast & {
+				border-color: #fff;
+				background-color: #000;
+			}
 		}
 	}
 }
+
 
 .a11y-title {
 	font-size: 9.2rem;
@@ -197,7 +236,7 @@ div.bg-img {
 }	
 
 .nav-slider {
-	padding: 5em 0;
+	padding: 2em 0;
 }
 .nav-slide {
 	text-align: left;
@@ -219,6 +258,7 @@ div.bg-img {
 // Typo
 
 #typography {
+	padding-top: 10rem;
 	
 	blockquote {
 		margin-bottom: 5rem;
@@ -300,6 +340,11 @@ div.bg-img {
 		position: absolute;
 		top: 0;
 		right: $grid-padding;
+		
+		&:hover,
+		&:focus {
+			outline: none;
+		}
 	}
 }
 
@@ -346,7 +391,8 @@ div.bg-img {
 // Forms
 
 #forms {
-	
+	padding-top: 10rem;
+		
 	&::after,
 	&::before {
 		content: '';

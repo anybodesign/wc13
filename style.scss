@@ -75,22 +75,15 @@ body {
 		position: absolute;
 		bottom: $grid-padding*2;
 		left: 50%;
-		transform: translateX(-50%);
-		background-color: $secondary-color;
+		margin-left: -36px;
 		z-index: 2;
-
-		.highcontrast & {
-			background-color: #000;
-		}	
-		
 		
 		&:focus,
 		&:hover {
-			background-color: transparent;
-
+			border-color: $secondary-color;
+			
 			.highcontrast & {
-				background-color: #000;
-				opacity: .5;
+				border-color: #666;
 			}	
 			
 		}

@@ -491,34 +491,33 @@ input[type=submit].action-btn:focus {
 
 .hand-btn,
 button.hand-btn,
-input[type=submit].hand-btn {
+input[type=submit].hand-btn,
+.slick-prev,
+.slick-next {
 	display: block;
 	width: 72px; 
 	height: 72px;
 	border-radius: 36px;
 	border: $secondary-color 5px solid; 
 	background: url(img/icon/hand-white.svg) center center no-repeat;
+	background-color: $secondary-color;
 	transition: .4s ease-in-out;
 	@include a11y-hide(300px);
 
 	.highcontrast & {
+		background-color: #000;
 		border-color: #000;
 	}	
 	
 	&:focus, &:hover {
-		background-color: $secondary-color;
+		background-color: $primary-color;
+		border-color: $primary-color;
 		outline: none;
 
 		.highcontrast & {
-			background-color: #000;
+			background-color: #666;
+			border-color: #666;
 		}	
 	}
 	
 }
-
-.slick-prev,
-.slick-next {
-	@extend .hand-btn;
-}
-
-

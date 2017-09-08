@@ -106,7 +106,7 @@ jQuery(document).ready(function($) {
 	           
 	            jQuery('.main-menu a').parent().removeClass("active");
 	            currLink.parent().addClass("active");
-	            //window.location.hash = this.hash;
+	            window.location.hash = this.hash;
 	        
 	        } else {
 	           
