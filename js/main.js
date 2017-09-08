@@ -39,20 +39,32 @@ jQuery(document).ready(function($) {
 		slidesToScroll: 1,
 		arrows: true,
 		dots: false,
-		infinite: false
+		infinite: false,
+		nextArrow: '<button type="button" class="slick-next">Panneau suivant</button>',
+		prevArrow: '<button type="button" class="slick-prev">Panneau précédent</button>'
 	});
-	
+		
+
 	
 // Transcript
 	
 	$('.show-transcript').click(function() {
 		$('.transcript').slideToggle();
+		$(this).toggleClass('transcript-opened');
+
+			if ($(this).hasClass('transcript-opened')) {
+				$('.transcript').attr('aria-expanded','true');
+			} else {
+				$('.transcript').attr('aria-expanded','false');
+			}
+		
 		
 		return false;
 	});
 	
 	
 // Smooth scroll
+// https://css-tricks.com/snippets/jquery/smooth-scrolling/
 
 
 	// Select all links with hashes
@@ -95,16 +107,16 @@ jQuery(document).ready(function($) {
 		
 	function onScroll() {
 
-	    var scrollPos = jQuery(document).scrollTop();
+	    var scrollPos = $(document).scrollTop();
 	    
-	    jQuery('.main-menu a').each(function () {
+	    $('.main-menu a').each(function () {
 	        
-	        var currLink = jQuery(this);
-	        var refElement = jQuery(currLink.attr("href"));
+	        var currLink = $(this);
+	        var refElement = $(currLink.attr("href"));
 	        
 	        if (refElement.position().top-$offset <= scrollPos && refElement.position().top-$offset + refElement.height() > scrollPos) {
 	           
-	            jQuery('.main-menu a').parent().removeClass("active");
+	            $('.main-menu a').parent().removeClass("active");
 	            currLink.parent().addClass("active");
 	            window.location.hash = this.hash;
 	        
@@ -115,7 +127,7 @@ jQuery(document).ready(function($) {
 	        }
 	    });
 	}
-    jQuery(document).on("scroll", onScroll);
+    $(document).on("scroll", onScroll);
 
 	  
   

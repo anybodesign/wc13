@@ -71,7 +71,7 @@
 			
 			<img class="cover-star star-rotation" src="img/icon/star.svg" alt="motif étoile">
 			
-			<a href="#a11y" class="hand-btn wow animated bounceInUp" data-wow-delay="1.5s">On commence ?</a>
+			<a href="#a11y" class="hand-btn hand-centered wow animated bounceInUp" data-wow-delay="1.5s">On commence ?</a>
 		</div>
 		
 		
@@ -122,7 +122,7 @@
 					
 				</div>
 
-				<a href="#a11y_devices" class="hand-btn wow animated bounceInUp" data-wow-delay=".5s">On continue ?</a>
+				<a href="#a11y_devices" class="hand-btn hand-centered wow animated bounceInUp" data-wow-delay=".5s">On continue ?</a>
 			</div>
 		
 			<!-- end subsection 1 -->
@@ -133,7 +133,7 @@
 					Lecteur d'écran et plage braille
 				</p>
 				
-				<a href="#a11y_icons" class="hand-btn wow animated bounceInUp" data-wow-delay=".5s">La suite !</a>
+				<a href="#a11y_icons" class="hand-btn hand-centered wow animated bounceInUp" data-wow-delay=".5s">La suite !</a>
 			</div>
 			
 			<!-- end subsection 2 -->
@@ -177,7 +177,7 @@
 					
 				</div>
 				
-				<a href="#typography" class="hand-btn wow animated bounceInUp" data-wow-delay=".5s">On passe à la typo maintenant</a>
+				<a href="#typography" class="hand-btn hand-centered wow animated bounceInUp" data-wow-delay=".5s">On passe à la typo maintenant</a>
 			</div>
 			
 
@@ -252,25 +252,27 @@
 						<div class="col-6">
 							<h4 class="h3-like">La recette en vidéo</h4>
 							
-							<figure class="video-player" role="group">
-								<a href="#" title="lancer la vidéo" class="play"><img src="img/bouillabaisse.jpg" alt="recette de la bouillabaisse"></a>
-								<figcaption>
-									La bouillabaisse marseillaise
-									<button class="action-btn show-transcript" type="button">Transcription de la vidéo</button>
-									<div class="transcript bluecard">
-										<p>Peler, épépiner et concasser les tomates. Hacher les oignons, écraser l'ail. Emincer les blancs de poireaux. Mettre tous ces légumes dans une grande marmite. Vider les poissons, réserver les foies que l'on hachera. Couper les têtes et les queues, couper les pattes des cigales de mer. Ajouter les déchets des poissons (têtes et queues) et les cigales dans la marmite, ajouter 25 cl d'huile d'olive. Mettre également le fenouil, le laurier, le persil, les poivre en grains et la peau d'orange séchée.</p>
-										<p>Et le reste de la transcription…</p>
-									</div>
-								</figcaption>
-							</figure>
-							
-							<h5>Récap'</h5>
-							
+							<div class="video-container">
+								<figure class="video-player" role="group">
+									<a href="#" title="lancer la vidéo" class="play"><img src="img/bouillabaisse.jpg" alt="recette de la bouillabaisse"></a>
+									<figcaption>
+										La bouillabaisse marseillaise
+									</figcaption>
+								</figure>
+									
+								<button class="action-btn show-transcript" type="button" aria-expanded="false">Transcription de la vidéo</button>
+								<div class="transcript bluecard">
+									<p>Peler, épépiner et concasser les tomates. Hacher les oignons, écraser l'ail. Emincer les blancs de poireaux. Mettre tous ces légumes dans une grande marmite. Vider les poissons, réserver les foies que l'on hachera. Couper les têtes et les queues, couper les pattes des cigales de mer. Ajouter les déchets des poissons (têtes et queues) et les cigales dans la marmite, ajouter 25 cl d'huile d'olive. Mettre également le fenouil, le laurier, le persil, les poivre en grains et la peau d'orange séchée.</p>
+									<p>Et le reste de la transcription…</p>
+								</div>
+							</div>
+									
 							<table>
+								<caption><h5>Récap'</h5></caption>
 								<thead>
 									<tr>
-										<th>Nombre de personnes</th>
-										<th>Temps de préparation</th>
+										<th scope="col">Nombre de personnes</th>
+										<th scope="col">Temps de préparation</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -612,7 +614,9 @@ Ce pauvre focus n'est pas obligé d'être moche :)</p>
 						<div class="slicky-slide">
 							<div class="row x-center">
 								<div class="centered col-3">
-									<img src="img/icons3.png" alt="picto mystérieux">
+									<a href="#thanks" title="Et voilà c'est fini !">
+										<img src="img/icons3.png" alt="picto mystérieux">
+									</a>
 								</div>
 							</div>
 						</div>
@@ -621,14 +625,14 @@ Ce pauvre focus n'est pas obligé d'être moche :)</p>
 				</div>
 			
 			</div>
-
+			
 		</div>		
 
 	
 	<!-- 	// Thanks ***** -->
 	
 	
-		<div class="section thanks-section">
+		<div class="section thanks-section" id="thanks">
 			
 			<div class="inner">
 				<h2 class="title-main wow animated bounceInDown">
@@ -651,7 +655,7 @@ Ce pauvre focus n'est pas obligé d'être moche :)</p>
 				</div>
 				
 				<div class="thanks-card dark-bg">
-					<p>Merci à <a href="http://www.accesbilis.fr" target="_blank" title="Site web de Claire Bizingre (ouvre un nouvel onglet">Claire Bizingre</a> pour la relecture, les tests et les conseils !</p>
+					<p>Merci à <a href="http://www.accesbilis.fr" target="_blank" title="Site web de Claire Bizingre (ouvre un nouvel onglet)">Claire Bizingre</a> pour la relecture, les tests et les conseils !</p>
 				</div>
 				
 				<img class="cover-box wow animated jackInTheBox" src="img/sardine-box.png" alt="visuel boite de sardines wordcamp marseille 2017">

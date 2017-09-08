@@ -92,27 +92,6 @@ div.bg-img {
 
 #a11y {
 	
-	.subsection {
-		.hand-btn {
-			position: absolute;
-			bottom: $grid-padding*2;
-			left: 50%;
-			margin-left: -36px;
-			z-index: 2;
-	
-			&:focus,
-			&:hover {
-				background-color: $primary-color;
-				border-color: $primary-color;
-	
-				.highcontrast & {
-					background-color: #666;
-					border-color: #666;
-				}	
-				
-			}
-		}
-	}	
 }
 
 .a11y-icons-slider {
@@ -335,19 +314,24 @@ div.bg-img {
 	figcaption {
 		position: relative;
 	}
+}
+
+.video-container {
+	position: relative;
+
 	.action-btn {
 		font-size: 1.2rem;
 		position: absolute;
-		top: 0;
-		right: $grid-padding;
+		bottom: 0;
+		right: 0;
+		margin: 0;
 		
 		&:hover,
 		&:focus {
 			outline: none;
 		}
-	}
+	}	
 }
-
 .transcript {
 	display: none;
 	border: $secondary-color 2px dashed;
@@ -454,7 +438,8 @@ div.bg-img {
 .thanks-section {
 	@extend .cover-section;
 	padding-bottom: 620px;
-	
+	padding-top: 12rem;
+		
 	.inner {
 		padding-top: 5rem;
 	}
@@ -547,10 +532,3 @@ div.bg-img {
 		margin-bottom: 0;
 	}
 }
-
-
-
-
-
-
-

@@ -132,7 +132,8 @@ p a {
 	color: $primary-color;
 	transition: border .2s ease-in-out;
 	
-	.dark-bg & {
+	.dark-bg &,
+	.highcontrast .dark-bg & {
 		color: #fff;
 		border-bottom-color: #fff
 	}
@@ -520,4 +521,12 @@ input[type=submit].hand-btn,
 		}	
 	}
 	
+}
+
+.hand-centered {
+	position: absolute;
+	bottom: $grid-padding*2;
+	left: 50%;
+	margin-left: -36px;
+	z-index: 2;
 }

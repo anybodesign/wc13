@@ -71,24 +71,6 @@ body {
 		min-height: 335px;
 	}
 	
-	& .hand-btn {
-		position: absolute;
-		bottom: $grid-padding*2;
-		left: 50%;
-		margin-left: -36px;
-		z-index: 2;
-		
-		&:focus,
-		&:hover {
-			border-color: $secondary-color;
-			
-			.highcontrast & {
-				border-color: #666;
-			}	
-			
-		}
-	}
-		
 }
 .cover-box {
 	position: absolute;
