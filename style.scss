@@ -210,13 +210,14 @@ body {
 	bottom: -35px;
 	width: 100%;
 	margin: 0;
-	padding: 0; 
+	padding: 1em 0; 
 	list-style: none;
 	text-align: center;
 	
 	li {
 		display: inline-block;
-		margin: $grid-padding;
+		padding: 1em;
+		margin: 0;
 		
 		button {
 			padding: 0;
