@@ -154,7 +154,7 @@ div.bg-img {
 	margin-bottom: 0;		
 }
 
-#a11y_section_icons {
+#a11y_icons {
 	background-color: $secondary-color;
 
 	.highcontrast & {
@@ -192,7 +192,7 @@ div.bg-img {
 
 // Navigation
 
-.highcontrast #navigation_section {
+.highcontrast #navigation {
 	background-image: none !important;
 }	
 
@@ -218,7 +218,7 @@ div.bg-img {
 
 // Typo
 
-#typography_section {
+#typography {
 	
 	blockquote {
 		margin-bottom: 5rem;
@@ -345,7 +345,7 @@ div.bg-img {
 
 // Forms
 
-#forms_section {
+#forms {
 	
 	&::after,
 	&::before {
