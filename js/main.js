@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 	
 	
-	// Responsive Main Menu
+// Responsive Main Menu  // not used yet...
 
 	$('#menu-toggle').click(function() {
 		$('.main-menu').slideToggle();
@@ -25,7 +25,7 @@ jQuery(document).ready(function($) {
 		});
 
 	
-	// Sliders
+// Sliders
 	
 	$('.slicky-slider').slick({
 		slidesToShow: 1,
@@ -43,7 +43,7 @@ jQuery(document).ready(function($) {
 	});
 	
 	
-	// Transcript
+// Transcript
 	
 	$('.show-transcript').click(function() {
 		$('.transcript').slideToggle();
@@ -52,7 +52,8 @@ jQuery(document).ready(function($) {
 	});
 	
 	
-	// Smooth scroll
+// Smooth scroll
+
 
 	// Select all links with hashes
 	$('a[href*="#"]')
@@ -87,10 +88,39 @@ jQuery(document).ready(function($) {
 	    }
 	  });	
 
+
+// Menu Class on Scroll
+
+	var $offset = 64;
+		
+	function onScroll() {
+
+	    var scrollPos = jQuery(document).scrollTop();
+	    
+	    jQuery('.main-menu a').each(function () {
+	        
+	        var currLink = jQuery(this);
+	        var refElement = jQuery(currLink.attr("href"));
+	        
+	        if (refElement.position().top-$offset <= scrollPos && refElement.position().top-$offset + refElement.height() > scrollPos) {
+	           
+	            jQuery('.main-menu a').parent().removeClass("active");
+	            currLink.parent().addClass("active");
+	            //window.location.hash = this.hash;
+	        
+	        } else {
+	           
+	            currLink.parent().removeClass("active");
+	            
+	        }
+	    });
+	}
+    jQuery(document).on("scroll", onScroll);
+
 	  
   
   
-	// Contrast
+// Contrast
 
     // Check (onLoad) if the cookie is there and set the class if it is
     
@@ -131,13 +161,13 @@ jQuery(document).ready(function($) {
     });	
   
   
-  /**	
-	 * skip-link-focus-fix.js
-	 *
-	 * Helps with accessibility for keyboard only users.
-	 *
-	 * Learn more: https://git.io/vWdr2
-	 */
+/**	
+ * skip-link-focus-fix.js
+ *
+ * Helps with accessibility for keyboard only users.
+ *
+ * Learn more: https://git.io/vWdr2
+ */
 	( function() {
 		var is_webkit = navigator.userAgent.toLowerCase().indexOf( 'webkit' ) > -1,
 		    is_opera  = navigator.userAgent.toLowerCase().indexOf( 'opera' )  > -1,
