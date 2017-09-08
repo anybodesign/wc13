@@ -43,6 +43,8 @@ jQuery(document).ready(function($) {
 		nextArrow: '<button type="button" class="slick-next" aria-label="Panneau suivant">Panneau suivant</button>',
 		prevArrow: '<button type="button" class="slick-prev" aria-label="Panneau précédent">Panneau précédent</button>'
 	});
+	
+	$('.slick-dots button').prepend("Panneau ");
 		
 
 	
