@@ -40,8 +40,8 @@ jQuery(document).ready(function($) {
 		arrows: true,
 		dots: false,
 		infinite: false,
-		nextArrow: '<button type="button" class="slick-next">Panneau suivant</button>',
-		prevArrow: '<button type="button" class="slick-prev">Panneau précédent</button>'
+		nextArrow: '<button type="button" class="slick-next" aria-label="Panneau suivant">Panneau suivant</button>',
+		prevArrow: '<button type="button" class="slick-prev" aria-label="Panneau précédent">Panneau précédent</button>'
 	});
 		
 
