@@ -402,10 +402,105 @@ div.bg-img {
 // Merci
 
 
-#thanks_section {
-	background: linear-gradient(to top, #7fc3e1 0%, #2a9cce 100%);
+.thanks-section {
+	@extend .cover-section;
+	
+	.inner {
+		//padding-bottom: 562px;
+	}
+	
+	&::after {
+		content: '';
+		display: block;
+		background: url(img/beach.png) center top no-repeat;
+		background-size: cover;
+		position: absolute;
+		width: 100%;
+		height: 562px;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+	}
 
-	.highcontrast & {
-		background: #ccc;
+	.cover-box {
+		position: absolute;
+		left: auto;
+		right: 10%;
+		top: 80px;
+		max-width: 490px;
+		z-index: 3;
+	}
+	.title-main {
+		background-color: $secondary-color;
+		color: #fff;
+		left: 40%;
+		right: auto;		
+		top: -8%;
+		z-index: 3;
+		
+		.highcontrast & {
+			background-color: #000;
+		}
+		
+		&::after {
+			border-top-color: $secondary-color;
+			
+			.highcontrast & {
+				border-top-color: #000;
+			} 
+		}
+	}
+
+}
+
+.id-card {
+	position: relative;
+	margin-left: 16.6667%;
+	max-width: 350px;
+	padding: $grid-padding*2;
+	background-color: #fff;
+	margin-bottom: $grid-padding;
+	z-index: 2;
+}
+
+.author {
+	font-family: $font-title;
+	font-size: 1.8rem;
+	margin-bottom: $grid-padding;
+}
+.author-infos {
+	padding-left: 80px;
+	padding-top: 1.5rem;
+	min-height: 75px;
+	background: url(img/anybodesign.svg) 0 0 no-repeat;
+	margin-bottom: 0;
+}
+.wpparis-infos {
+	@extend .author-infos;
+	padding-top: 0;
+	min-height: 54px;
+	background: url(img/wpparis.svg) 0 0 no-repeat;
+}
+
+.thanks-card {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	display: inline-block;
+	padding: $grid-padding*2;
+	background-color: $secondary-color;
+	margin-top: -2rem;
+	z-index: 1;
+	
+	p {
+		color: #fff;
+		margin-bottom: 0;
 	}
 }
+
+
+
+
+
+
+

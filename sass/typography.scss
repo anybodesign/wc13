@@ -132,6 +132,11 @@ p a {
 	color: $primary-color;
 	transition: border .2s ease-in-out;
 	
+	.dark-bg & {
+		color: #fff;
+		border-bottom-color: #fff
+	}
+	
 	&:active {
 		border-bottom-color: $third-color;
 		border-bottom-width: 5px;
@@ -162,7 +167,14 @@ p a {
 		.highcontrast & {
 			color: #000;
 			border-bottom-color: #000;
-		}		
+		}
+
+		.dark-bg & {
+			color: #fff;
+			border-bottom-color: #fff;
+			opacity: .7;
+		}
+				
 	}
 	
 	&[target="_blank"]::after {
@@ -172,6 +184,10 @@ p a {
 		vertical-align: middle;
 		background: url(img/icon/external.svg) 0 0 no-repeat;
 		margin-left: 3px;
+	
+		.dark-bg & {
+			background: url(img/icon/external-white.svg) 0 0 no-repeat;
+		}		
 	}
 }
 
