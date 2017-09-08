@@ -1,22 +1,26 @@
 // Common
 
-.section, .slide {
-	text-align:center;	
+.section {
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	min-height: 720px;	// note: support 1280x720	
+	padding-top: 100px;
 
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
-	overflow: hidden;
-	outline: none;
+	background-attachment: fixed;
 	
 	& .inner {
-		padding-top: 64px;
+		width: 100%;
 	}
 	
-}
-
-.section {
-	background-attachment: fixed;
 }
 
 .section-content {
@@ -215,10 +219,9 @@ div.bg-img {
 // Typo
 
 #typography_section {
-	padding: 4em 0 0 0;
 	
 	blockquote {
-		margin-bottom: 10rem;
+		margin-bottom: 5rem;
 	}
 }
 .bluecard {
@@ -342,13 +345,7 @@ div.bg-img {
 
 // Forms
 
-.form-intro {
-	h3, p {
-		text-align: center;
-	}
-}
 #forms_section {
-	padding: 2em 0 0 0;
 	
 	&::after,
 	&::before {
@@ -373,7 +370,13 @@ div.bg-img {
 	}
 	
 	form {
-		padding-bottom: 10em;
+		padding-bottom: 2em;
+	}
+}
+
+.form-intro {
+	h3, p {
+		text-align: center;
 	}
 }
 
@@ -404,9 +407,10 @@ div.bg-img {
 
 .thanks-section {
 	@extend .cover-section;
+	padding-bottom: 620px;
 	
 	.inner {
-		//padding-bottom: 562px;
+		padding-top: 5rem;
 	}
 	
 	&::after {
@@ -426,7 +430,7 @@ div.bg-img {
 		position: absolute;
 		left: auto;
 		right: 10%;
-		top: 80px;
+		top: 70px;
 		max-width: 490px;
 		z-index: 3;
 	}
@@ -435,7 +439,7 @@ div.bg-img {
 		color: #fff;
 		left: 40%;
 		right: auto;		
-		top: -8%;
+		top: -12%;
 		z-index: 3;
 		
 		.highcontrast & {
@@ -457,7 +461,7 @@ div.bg-img {
 	position: relative;
 	margin-left: 16.6667%;
 	max-width: 350px;
-	padding: $grid-padding*2;
+	padding: $grid-padding*3 $grid-padding*2;
 	background-color: #fff;
 	margin-bottom: $grid-padding;
 	z-index: 2;

@@ -7,9 +7,7 @@
 	<meta name="description" content="Dans le cadre d'un projet web, intégrer l'accessibilité commence dès la conception graphique.">
 
 	<link rel="stylesheet" type="text/css" href="css/pridx.css">
-	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
 	<link rel="stylesheet" type="text/css" href="css/slick.css">
-	<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	
@@ -23,7 +21,7 @@
 
 <!-- 	// Head ***** -->
 	
-	<header id="app_head">
+	<header id="app_head" role="banner">
 		
 		<nav id="skiplinks_nav">
 			<ul class="skiplinks-menu">
@@ -34,14 +32,12 @@
 		
 		<nav id="main_nav" role="navigation">
 			<ul class="main-menu">
-				<li data-menuanchor="a11y"><a href="#a11y">A11y</a></li>
-					<li data-menuanchor="a11y-devices" class="hidden"><a href="#a11y-devices">Devices</a></li>
-					<li data-menuanchor="a11y-icons" class="hidden"><a href="#a11y-icons">Icons</a></li>
-				<li data-menuanchor="typography"><a href="#typography">Typographie</a></li>
-				<li data-menuanchor="navigation"><a href="#navigation">Navigation</a></li>
-				<li data-menuanchor="forms"><a href="#forms">Formulaires</a></li>
-				<li data-menuanchor="colors"><a href="#colors">Couleurs</a></li>
-				<li data-menuanchor="images"><a href="#images">Images</a></li>			
+				<li><a href="#a11y">A11y</a></li>
+				<li><a href="#typography">Typographie</a></li>
+				<li><a href="#navigation">Navigation</a></li>
+				<li><a href="#forms">Formulaires</a></li>
+				<li><a href="#colors">Couleurs</a></li>
+				<li><a href="#images">Images</a></li>			
 			</ul>
 		</nav>
 		
@@ -53,8 +49,7 @@
 	</header>
 	
 	
-	
-	<div id="fullpage">
+	<main id="fullpage" role="main">
 	
 		
 	<!-- 	// Cover ***** -->
@@ -89,7 +84,7 @@
 				<div class="row x-middle">
 					
 					<div class="col-6">
-						<figure role="group">
+						<figure class="wow animated slideInLeft">
 							<img src="img/wcmarseille-soap.jpg" alt="savon du wordcamp marseille">
 						</figure>
 					</div>
@@ -576,7 +571,7 @@ Ce pauvre focus n'est pas obligé d'être moche :)</p>
 						
 						<div class="slicky-slide">
 							<div class="row x-center">
-								<figure class="centered col-8" role="group">
+								<figure class="centered col-8">
 									<img src="img/icons.png" alt="icones sans libellés">
 								</figure>
 							</div>
@@ -584,7 +579,7 @@ Ce pauvre focus n'est pas obligé d'être moche :)</p>
 						
 						<div class="slicky-slide">
 							<div class="row x-center">
-								<figure class="centered col-8" role="group">
+								<figure class="centered col-8">
 									<img src="img/icons2a.png" alt="icones sans libellés">
 								</figure>
 							</div>
@@ -592,7 +587,7 @@ Ce pauvre focus n'est pas obligé d'être moche :)</p>
 						
 						<div class="slicky-slide">
 							<div class="row x-center">
-								<figure class="centered col-8" role="group">
+								<figure class="centered col-8">
 									<img src="img/icons2b.png" alt="icones avec libellés">
 								</figure>
 							</div>
@@ -652,34 +647,20 @@ Ce pauvre focus n'est pas obligé d'être moche :)</p>
 
 
 		
-	</div> <!-- End fullPage -->
+	</main> <!-- End fullPage -->
+
 </div>
 
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/jquery.cookie.js"></script>
-<script src="js/scrolloverflow.min.js"></script>
-<script src="js/jquery.fullpage.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/main.js"></script>
 
 <script>
-	$(document).ready(function() {
-		$('#fullpage').fullpage({
-			scrollBar: true,
-			loopHorizontal: false,
-			anchors: ['cover', 'a11y', 'a11y-devices', 'a11y-icons', 'typography', 'navigation', 'forms', 'colors', 'images'],
-			menu: '#main_nav ul',
-			css3: false,
-			scrollingSpeed:	1000,
-			scrollOverflow: true,
-			//autoScrolling: false
-		});		
-	});
 	new WOW().init();
 </script>
-
 
 </body>
 </html>
