@@ -130,7 +130,7 @@ p a {
 	text-decoration: none;
 	border-bottom: $primary-color 3px solid;
 	color: $primary-color;
-	transition: border .2s ease-in-out;
+	transition: background .2s ease-in-out;
 	
 	.dark-bg &,
 	.highcontrast .dark-bg & {
@@ -151,19 +151,12 @@ p a {
 		color: #777;
 		border-bottom-color: #777
 	}	
-/*
-	&:visited {
-		border-bottom: $secondary-color 3px dashed;
-		color: $secondary-color;
-	}
-*/
-	&:hover,
-	&:focus {
+
+	&:hover {
 		padding-bottom: .1rem;
 		color: $secondary-color;
 		border-bottom-color: $secondary-color;
 		border-bottom-width: 5px;
-		outline: none;
 
 		.highcontrast & {
 			color: #000;
@@ -177,6 +170,22 @@ p a {
 		}
 				
 	}
+	&:focus {
+		color: #fff;
+		background-color: $secondary-color; 
+		outline: none;
+		
+		.highcontrast & {
+			color: #fff;
+			background-color: #000;
+		}
+		.dark-bg & {
+			color: $secondary-color;
+			background-color: #fff;
+		}
+	}
+	
+	
 	
 	&[target="_blank"]::after {
 		content: '';

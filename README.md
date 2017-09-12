@@ -6,3 +6,19 @@ L’accessibilité numérique, c'est proposer aux internautes en situation de ha
 En réalité, intégrer le concept d'accessibilité commence dès la conception et le design graphique !
 
 Code source de la page web servant de support à la conférence.
+
+## Quelques liens
+
+### Couleurs
+* <http://accessible-colors.com> : outil web
+* <http://colorsafe.co> : outil web
+* [Colour Contrast Analyser](https://developer.paciellogroup.com/resources/contrastanalyser/) : Application Mac/PC
+* [Stark](http://www.getstark.co) : Plugin Sketch
+
+### Vérification du code
+* <https://validator.w3.org> : validateur W3C
+* <http://ffoodd.github.io/a11y.css/index.html> : a11y.css de Gaël Poupard
+
+### Articles
+* [How icons are ruining interfaces - Axess Lab](https://axesslab.com/icons-ruining-interfaces/)
+* [Tester le niveau d’accessibilité d’un thème WordPress — Claire Bizingre](http://www.accesbilis.fr/tester-le-niveau-daccessibilite-dun-theme-wordpress/)
