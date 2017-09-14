@@ -75,7 +75,7 @@ body {
 .cover-box {
 	position: absolute;
 	left: 0; 
-	top: 120px;
+	top: 20rem;
 	width: 95%;
 	height: auto;
 	
@@ -135,7 +135,8 @@ body {
 	display: inline-block;
 	position: absolute;
 	left: 2%;
-	top: -18%;
+	top: 0%;
+	z-index: 2;
 	
 	@include rwd(large) {
 		font-size: 6rem;
