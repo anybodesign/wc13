@@ -3,6 +3,7 @@ jQuery(document).ready(function($) {
 	
 // Responsive Main Menu  // not used yet...
 
+/*
 	$('#menu-toggle').click(function() {
 		$('.main-menu').slideToggle();
 		$(this).toggleClass('menu-opened');
@@ -23,6 +24,7 @@ jQuery(document).ready(function($) {
 		    	$('#menu-toggle').removeClass('menu-opened');
 			}
 		});
+*/
 
 	
 // Sliders

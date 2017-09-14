@@ -75,17 +75,31 @@ body {
 .cover-box {
 	position: absolute;
 	left: 0; 
-	top: 60px;
-	max-width: 700px;
+	top: 120px;
+	width: 95%;
+	height: auto;
+	
+	@include rwd(large) {
+		max-width: 700px;
+		top: 60px;
+	}
 }
 .cover-star {
-	width: 1650px;
-	height: 1650px;
+	width: 650px;
+	height: 650px;
+	max-width: none;
 	opacity: .25;
 	position: absolute;
-	top: 60%; margin-top: -825px;
-	left: -250px;
+	top: 60%; 
+	margin-top: -325px;
+	left: -10%;
 	z-index: 1;
+	
+	@include rwd(large) {
+		width: 1650px;
+		height: 1650px;
+		margin-top: -825px;
+	}
 }
 .star-rotation {
 	animation: rotate-once 5s;
@@ -114,27 +128,39 @@ body {
 	margin: 0;
 	text-align: left;
 	line-height: 1;
-	font-size: 6rem;
+	font-size: 4rem;
 	background-color: #fff;
 	padding: $grid-padding/1.5;
 	color: $secondary-color;
 	display: inline-block;
 	position: absolute;
-	right: 5%;
-	top: -26%;
+	left: 2%;
+	top: -16%;
+	
+	@include rwd(large) {
+		font-size: 6rem;
+		left: auto;
+		right: 5%;
+		top: -26%;
+	}
 	
 	&::after {
 		content: '';
 		position: absolute; 
 		bottom: -60px;
-		left: 0;  
+		left: 50px;  
 		display: block; 
 		width: 0; height: 0;
 		border-color: transparent;
 		border-top-color: #fff; 
 		border-width: 30px;
 		border-style: solid;
-		transform: skewX(-50deg);
+		transform: skewX(50deg);
+		
+		@include rwd(large) {
+			transform: skewX(-50deg);
+			left: 0;
+		}	
 	}
 }
 
@@ -196,18 +222,26 @@ body {
 }
 
 .slick-prev {
-	left: -2.5rem;
+	left: .5rem;
 	transform: rotate(90deg);
+	
+	@include rwd(large) {
+		left: -2.5rem;
+	}
 }
 .slick-next {
-	right: -2.5rem;
+	right: .5rem;
 	transform: rotate(90deg) scaleY(-1);
+	
+	@include rwd(large) {
+		right: -2.5rem;
+	}
 }
 
 
 .slick-dots {
 	position: absolute;
-	bottom: -35px;
+	bottom: -60px;
 	width: 100%;
 	margin: 0;
 	padding: 1em 0; 

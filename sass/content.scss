@@ -11,25 +11,23 @@
 	justify-content: center;
 	align-items: center;
 	
-	min-height: 720px;	// note: support 1280x720	
+	//min-height: 720px;	// note: support 1280x720
+	min-height: 100vh;	
 
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
+	
+	@include rwd(large) {
+		background-attachment: fixed;			
+	}
 	
 	outline: none;
 	
 	& .inner {
 		width: 100%;
 	}
-	
-	@include rwd(1440px) {
-		min-height: 810px;
-	}
-	@include rwd(1920px) {
-		min-height: 1080px;
-	}
+
 }
 
 .subsection {
@@ -98,7 +96,20 @@ div.bg-img {
 // A11Y
 
 #a11y {
+	padding-bottom: 12rem;
 	
+	@include rwd(large) {
+		padding-bottom: 0;
+	}
+}
+.wc-soap {
+	max-width: 80%;
+	margin: 0 auto;
+	
+	@include rwd(large) {
+		max-width: none;
+		margin: auto;
+	}
 }
 
 .a11y-icons-slider {
@@ -120,7 +131,7 @@ div.bg-img {
 
 
 .a11y-title {
-	font-size: 9.2rem;
+	font-size: 6rem;
 	margin-bottom: 0;
 	text-align: center;
 	color: $secondary-color;
@@ -129,12 +140,19 @@ div.bg-img {
 		color: #000;
 	}	
 	
+	@include rwd(large) {
+		font-size: 9.2rem;
+	}
 }
 .a11y-numeronym,
 .a11y-number {
 	text-align: center;
-	font-size: 5.2rem;
+	font-size: 3rem;
 	margin-bottom: 0;
+	
+	@include rwd(large) {
+		font-size: 5.2rem;
+	}
 }
 .a11y-numeronym {
 	font-family: $font-title;
@@ -157,15 +175,20 @@ div.bg-img {
 	}
 	
 	&.large::before {
-		width: 490px;
+		width: 310px;
 		height: 36px;
-		background-size: cover;
+		background-size: contain;
+		
+		@include rwd(large) {
+			width: 490px;
+			height: 36px;
+		}
 	}
 }
 
 .a11y-devices-title {
 	position: absolute;
-	bottom: $grid-padding*2;
+	bottom: $grid-padding*6;
 	right: $grid-padding*2;
 	padding: $grid-padding;
 	max-width: 30rem;
@@ -176,7 +199,11 @@ div.bg-img {
 	color: $primary-color;
 	background-color: #fff;
 	text-align: left;
-	margin-bottom: 0;		
+	margin-bottom: 0;	
+	
+	@include rwd(large) {
+		bottom: $grid-padding*2;
+	}	
 }
 
 #a11y_icons {
@@ -201,42 +228,23 @@ div.bg-img {
 .a11y-icons-title {
 	color: #fff;
 	font-family: $font-title;
-	font-size: 3.2rem;
+	font-size: 2.2rem;
 	text-align: center;
+	
+	@include rwd(large) {
+		font-size: 3.2rem;
+	}
 	
 	span {
 		display: block;
 		font-family: $font-regular;
-		font-size: 1.6rem;
+		font-size: 1.4rem;
 		text-align: center;
 		color: #fff;
-	}
-}
-
-
-
-// Navigation
-
-.highcontrast #navigation {
-	background-image: none !important;
-}	
-
-.nav-slider {
-	padding: 2em 0;
-}
-.nav-slide {
-	text-align: left;
-	
-	h3 {
-		font-size: 3.2rem;
-		text-transform: uppercase;
 		
-		&.lowercase {
-			text-transform: lowercase;
+		@include rwd(large) {
+			font-size: 1.6rem;
 		}
-	}
-	img {
-		margin: 0 auto;
 	}
 }
 
@@ -327,21 +335,29 @@ div.bg-img {
 	position: relative;
 
 	.action-btn {
+		display: block;
+		margin: 1em 0 3em 0;
 		font-size: 1.2rem;
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		margin: 0;
+		position: relative;
+		
 		
 		&:hover,
 		&:focus {
 			outline: none;
+		}
+		
+		@include rwd(large) {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			margin: 0;
 		}
 	}	
 }
 .transcript {
 	display: none;
 	border: $secondary-color 2px dashed;
+	margin-top: -$grid-padding;
 	margin-bottom: $grid-padding*2;
 	padding: $grid-padding*2;
 	padding-bottom: 1.5em;
@@ -381,32 +397,82 @@ div.bg-img {
 }
 
 
+
+// Navigation
+
+#navigation {
+	padding: 10rem 0;
+	
+	@include rwd(large) {
+		padding: 0;
+	}
+
+	.highcontrast & {
+		background-image: none !important;
+	}	
+
+}
+
+.nav-slider {
+	
+	@include rwd(large) {
+		padding: 2em 0;
+	}
+}
+.nav-slide {
+	text-align: left;
+	
+	h3 {
+		font-size: 3.2rem;
+		text-transform: uppercase;
+		text-align: center;
+		
+		@include rwd(large) {
+			text-align: left;
+		}
+		
+		&.lowercase {
+			text-transform: lowercase;
+		}
+	}
+	img {
+		margin: 0 auto;
+	}
+}
+
+
+
+
+
 // Forms
 
 #forms {
 	padding-top: 10rem;
+	
+	@include rwd(large) {
 		
-	&::after,
-	&::before {
-		content: '';
-		display: block;
-		width: 290px;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		background: url(img/icon/pattern.svg) 0 0 repeat-y;
-
-		.highcontrast & {
-			opacity: 0;
-		}	
-
-	}
-	&::before {
-		left: $grid-padding*2;
-	}
-	&::after {
-		right: $grid-padding*2;
-	}
+		&::after,
+		&::before {
+			content: '';
+			display: block;
+			width: 290px;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			background: url(img/icon/pattern.svg) 0 0 repeat-y;
+	
+			.highcontrast & {
+				opacity: 0;
+			}	
+	
+		}
+		&::before {
+			left: $grid-padding*2;
+		}
+		&::after {
+			right: $grid-padding*2;
+		}
+	}	
 	
 	form {
 		padding-bottom: 2em;
@@ -422,6 +488,12 @@ div.bg-img {
 
 // Images
 
+#colors {
+	@include desktop(medium) {
+		background-position: right center;
+	}
+}
+
 .images-slider {
 	
 	.slicky-slide,
@@ -436,9 +508,28 @@ div.bg-img {
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
+			
+			&.last-icon {
+				max-width: 260px;
+				transform: translateY(-50%) translateX(-50%);
+				left: 50%;
+			}
 		}
 	}
 }
+
+.images-slider-picture {
+	display: none;
+	
+	&:first-child {
+		display: block;
+	}
+	
+	@include rwd(large) {
+		display: block;
+	}
+}
+
 
 
 // Merci
@@ -447,8 +538,12 @@ div.bg-img {
 .thanks-section {
 	@extend .cover-section;
 	padding-bottom: 620px;
-	padding-top: 12rem;
-		
+	padding-top: 10rem;
+	
+	@include rwd(large) {
+		padding-top: 12rem;
+	}
+	
 	.inner {
 		padding-top: 5rem;
 	}
@@ -467,20 +562,29 @@ div.bg-img {
 	}
 
 	.cover-box {
-		position: absolute;
-		left: auto;
-		right: 10%;
-		top: 70px;
-		max-width: 490px;
-		z-index: 3;
+		display: none;
+		
+		@include rwd(large) {
+			display: block;
+			position: absolute;
+			left: auto;
+			right: 10%;
+			top: 70px;
+			max-width: 490px;
+			z-index: 3;
+		}
 	}
 	.title-main {
 		background-color: $secondary-color;
 		color: #fff;
 		left: 40%;
 		right: auto;		
-		top: -12%;
+		top: 0;
 		z-index: 3;
+		
+		@include rwd(large) {
+			top: -12%;
+		}
 		
 		.highcontrast & {
 			background-color: #000;
@@ -488,6 +592,10 @@ div.bg-img {
 		
 		&::after {
 			border-top-color: $secondary-color;
+			
+			@include desktop(medium) {
+				transform: skewX(-50deg)
+			}
 			
 			.highcontrast & {
 				border-top-color: #000;
@@ -499,12 +607,15 @@ div.bg-img {
 
 .id-card {
 	position: relative;
-	margin-left: 16.6667%;
 	max-width: 350px;
+	margin: $grid-padding;
 	padding: $grid-padding*3 $grid-padding*2;
 	background-color: #fff;
-	margin-bottom: $grid-padding;
 	z-index: 2;
+	
+	@include rwd(large) {
+		margin-left: 16.6667%;
+	}
 }
 
 .author {
@@ -527,17 +638,32 @@ div.bg-img {
 }
 
 .thanks-card {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
+	max-width: 350px;
+	margin: $grid-padding;
 	display: inline-block;
 	padding: $grid-padding*2;
 	background-color: $secondary-color;
-	margin-top: -2rem;
 	z-index: 1;
+	
+	@include rwd(large) {
+		position: absolute;
+		max-width: none;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-top: -2rem;
+	}
 	
 	p {
 		color: #fff;
 		margin-bottom: 0;
+		font-size: 1.3rem;
+		
+		@include rwd(large) {
+			font-size: 1.6rem;
+		}
+		
+		&:first-child {
+			margin-bottom: $grid-padding;
+		}
 	}
 }

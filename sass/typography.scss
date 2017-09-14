@@ -207,40 +207,51 @@ blockquote {
 	position: relative;
 	max-width: 75%;
 	margin: $grid-padding 0;
-	padding: 1em 0 .75em 0;
-	//border-top: $primary-color 1px solid;
+	padding: 1em 0 .75em 112px;
+
+	@include rwd(large) {
+		padding: 1em 0 .75em 0;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 50%;
+			height: 1px;
+			background-color: $primary-color;
+			margin: 0 auto 5rem auto;
 	
+			.highcontrast & {
+				background-color: #777;
+			}	
+		}
+	}
+		
 	&::after {
 		content: '';
 		display: block;
 		width: 108px; height: 78px;
 		background: url(img/icon/quote.svg) 0 0 no-repeat;
 		position: absolute;
-		top: 3rem;
-		left: -80px;
-	}
-	&::before {
-		content: '';
-		display: block;
-		width: 50%;
-		height: 1px;
-		background-color: $primary-color;
-		margin: 0 auto 5rem auto;
-
-		.highcontrast & {
-			background-color: #777;
+		top: -2rem;
+		left: 0;
+	
+		@include rwd(large) {
+			top: 3rem;
+			left: -80px;
 		}	
 	}
+	
+
+	
 }
 q,
 blockquote,
 blockquote p {
-	//font-family: $font-bolditalic;
 	font-family: Georgia, serif;
 	font-style: italic;
 	font-weight: bold;
-	//font-style: normal;
 	font-size: 2rem;
+	
 }
 blockquote p {
 	margin-bottom: 0;
@@ -431,6 +442,10 @@ td, th {
 		border-top: $primary-color 1px solid;
 	}
 	
+}
+
+tbody td::before {
+	content: attr(data-title);
 }
 
 @include rwd(medium) {
