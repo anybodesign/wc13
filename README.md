@@ -7,7 +7,8 @@ En réalité, intégrer le concept d'accessibilité commence dès la conception 
 
 Code source de la page web servant de support à la conférence.
 
-Les maquettes Sketch sont ici : <https://sketch.cloud/s/3OWew>
+Les maquettes Sketch sont ici en preview : <https://sketch.cloud/s/3OWew>\
+Et ici en téléchargement : <https://lab.anybodesign.com/wc13/layout/>
 
 ## Quelques liens
 
