@@ -14,6 +14,7 @@ Code source de la page web servant de support à la conférence.
 * <http://colorsafe.co> : outil web
 * [Colour Contrast Analyser](https://developer.paciellogroup.com/resources/contrastanalyser/) : Application Mac/PC
 * [Stark](http://www.getstark.co) : Plugin Sketch
+* [Color Blindness](https://www.colour-blindness.org) : Extension Chrome
 
 ### Vérification du code
 * <https://validator.w3.org> : validateur W3C
