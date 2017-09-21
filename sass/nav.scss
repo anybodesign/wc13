@@ -60,6 +60,10 @@
 	z-index: 900;		
 	
 	@include rwd(large) {
+		right: $grid-padding;
+		padding-top: $grid-padding*2;
+	}
+	@include rwd(wide) {
 		right: $grid-padding*2;
 		top: .2em;
 		padding-top: $grid-padding*2;
@@ -119,7 +123,7 @@
 	top: 0; left: 0;
 	width: 100%;
 	background-color: $secondary-color;
-	z-index: 800;
+	z-index: 3;
 	
 	.highcontrast & {
 		background-color: #000;
@@ -140,6 +144,7 @@
 		text-transform: uppercase;
 		
 		@include rwd(large) {
+			font-size: 1.4rem;
 			margin: 0 $grid-padding;
 			
 			&::after {
@@ -149,6 +154,9 @@
 			&:last-child::after {
 				content: none;
 			}
+		}
+		@include rwd(wide) {
+			font-size: 1.6rem;
 		}
 		
 		&.hidden, &.hidden a {
@@ -183,10 +191,6 @@
 	@include rwd(large) {
 		justify-content: center;
 		padding-right: 0;
-		
-		& > li {
-			font-size: 1.6rem;
-		}
 	}
 	
 }

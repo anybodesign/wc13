@@ -57,14 +57,38 @@ jQuery(document).ready(function($) {
 		$(this).toggleClass('transcript-opened');
 
 			if ($(this).hasClass('transcript-opened')) {
-				$('.transcript').attr('aria-expanded','true');
+				$(this).attr('aria-expanded','true');
 			} else {
-				$('.transcript').attr('aria-expanded','false');
+				$(this).attr('aria-expanded','false');
 			}
 		
 		
 		return false;
 	});
+
+
+// Info bulle
+	
+	$('.info-bulle-trigger').click(function() {
+		$(this).next('.info-bulle').addClass('bulle-opened');
+		$(this).toggleClass('trigger-opened');
+
+			if ($(this).hasClass('trigger-opened')) {
+				$(this).attr('aria-expanded','true');
+				$(this).next('.info-bulle').addClass('bulle-opened');
+				$('#wrapper').addClass('overlay');
+			} else {
+				$(this).attr('aria-expanded','false');
+				$(this).next('.info-bulle').removeClass('bulle-opened');
+				$('#wrapper').removeClass('overlay');
+			}
+	});	
+	
+	$('.info-bulle-close').click(function() {
+		$('.info-bulle-trigger').attr('aria-expanded','false').removeClass('trigger-opened');
+		$('.info-bulle').removeClass('bulle-opened');
+		$('#wrapper').removeClass('overlay');
+	});	
 	
 	
 // Smooth scroll
